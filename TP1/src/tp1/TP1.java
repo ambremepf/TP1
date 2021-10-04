@@ -17,8 +17,11 @@ public class TP1 {
     public static void main(String[] args) {
         // TODO code application logic here
      Scanner reader = new Scanner(System.in);  // Reading from System.in
-     System.out.println("Enter a number: ");
+     System.out.println("Entrer un entier: ");
      int nb1 = reader.nextInt();
+     System.out.println("Entrer un entier: ");
+     int nb2 = reader.nextInt();
+     
     
     }
     
