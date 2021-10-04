@@ -3,6 +3,8 @@
  */
 package tp1;
 
+import java.util.Scanner;
+
 /**
  *
  * @author ambre
@@ -14,6 +16,8 @@ public class TP1 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+     Scanner scanneurClav;
+     scanneurClav = new Scanner(System.in);
     
     }
     
