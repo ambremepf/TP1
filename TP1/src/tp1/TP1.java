@@ -16,9 +16,10 @@ public class TP1 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-     Scanner scanneurClav;
-     scanneurClav = new Scanner(System.in);
+     Scanner reader = new Scanner(System.in);  // Reading from System.in
+     System.out.println("Enter a number: ");
+     int nb1 = reader.nextInt();
     
     }
     
-}// jean
+}
