@@ -18,10 +18,14 @@ public class TP1 {
         // TODO code application logic here
      Scanner reader = new Scanner(System.in);  // Reading from System.in
      System.out.println("Entrer un entier: ");
-     int nb1 = reader.nextInt();
+     double nb1 = reader.nextInt();
      System.out.println("Entrer un entier: ");
-     int nb2 = reader.nextInt();
+     double nb2 = reader.nextInt();
      
+    System.out.println("somme du nombre 1 et du nombre 2 : "+(nb1+nb2));
+    System.out.println("différence du nombre 1 et du nombre 2 : "+(nb1-nb2));
+    System.out.println("produit du nombre 1 et du nombre 2 : "+(nb1*nb2));
+    
     
     }
     
