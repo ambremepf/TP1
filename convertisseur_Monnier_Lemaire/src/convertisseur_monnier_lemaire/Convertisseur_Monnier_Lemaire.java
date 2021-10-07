@@ -48,11 +48,17 @@ public class Convertisseur_Monnier_Lemaire {
     }
     // nous sommes passé à des variables de type double car le deboger a trouvé un problème avec le type float.
     
-    
+    /**
+     *
+     * @param tempFarenheit
+     * @return
+     */
     public double FarenheitVersKelvin(double tempFarenheit){
         double tempKelvin;
         tempKelvin = (tempFarenheit+459.67)/1.8;
         return tempKelvin;
     }
+     double result =FarenheitVersKelvin(5.0);
     
+     
 }
