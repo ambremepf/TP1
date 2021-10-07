@@ -4,6 +4,8 @@
  */
 package guessmynumber_monnier_lemaire;
 
+import java.util.Random;
+
 /**
  *
  * @author jeanl
@@ -14,7 +16,16 @@ public class GuessMyNumber_Monnier_Lemaire {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+ 
+     Random generateurAleat = new Random();
+  
+     int n = generateurAleat.nextInt(100);
+     System.out.println(n);
+     
+     
+       
     }
+    
+    
     
 }
