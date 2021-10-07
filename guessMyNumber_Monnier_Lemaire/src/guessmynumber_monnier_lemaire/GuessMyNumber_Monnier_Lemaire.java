@@ -36,6 +36,24 @@ public class GuessMyNumber_Monnier_Lemaire {
         }
          
      }
+     if (niv == 2){
+         while (rep != n){
+        System.out.println("Veuillez entrer un nombre : ");
+        int reputilisateur = saisieUtilisateur.nextInt();
+        rep = reputilisateur;
+        i=i+1;
+        if (i<= 20){
+            System.out.println("vous avez perdu !");
+            break;
+        }
+        if (rep < n){
+            System.out.println("plus grand");
+        }
+        else {
+            System.out.println("plus petit");
+        }
+         }
+     } 
      System.out.println("bonne réponse !");
      System.out.println("vous avez mis "+i+" tours");
     }
