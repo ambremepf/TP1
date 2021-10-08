@@ -37,27 +37,27 @@ public class GuessMyNumber_Monnier_Lemaire {
         System.out.println("bonne réponse !");
         System.out.println("vous avez mis "+i+" tours");
      }
-     if (niv == 2){
-         while (i<=20){
-             while(rep!=n){
-                System.out.println("Veuillez entrer un nombre : ");
-                int reputilisateur = saisieUtilisateur.nextInt();
-                rep = reputilisateur;
-                i=i+1; 
-                if (rep < n){
-                    System.out.println("plus grand");
-                }
-                else {
-                    System.out.println("plus petit");
-                }
-             }
-             System.out.println("vous avez perdu !");
-         }
-         System.out.println("bonne réponse !");
-         System.out.println("vous avez mis "+i+" tours");
      }
-    
-    
-
-    
-    
+     if (niv == 2){
+         while(rep!=n){
+         System.out.println("Veuillez entrer un nombre : ");
+         int reputilisateur = saisieUtilisateur.nextInt();
+         rep = reputilisateur;
+         i=i+1; 
+        if (rep < n){
+            System.out.println("plus grand");
+        }
+        else {
+            System.out.println("plus petit");
+        }
+        }
+        if (i<=20){
+            System.out.println("vous avez gagné !!");
+            System.out.println("vous avez mis "+i+" tours");
+        }
+        else {
+            System.out.println("vous aves fait plus de 20 tours, vous avez perdu");
+        }
+     }
+     
+    }
