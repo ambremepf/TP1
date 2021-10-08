@@ -22,10 +22,7 @@ public class BouteilleBiere {
     
     BouteilleBiere uneBiere = new BouteilleBiere();
     
-    uneBiere.nom = "Cuvée des trolls";
-    uneBiere.degreAlcool = 7.0;
-    
-    uneBiere.lireEtiquette();
+    uneBiere.nom
     
     
     
