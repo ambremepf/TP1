@@ -19,10 +19,12 @@ public class Convertisseur_Monnier_Lemaire {
         tempKelvin = tempCelsius + 275;
         return tempKelvin;
     }
-    public static void main(String[] args) {
+    public static float main(String[] args) {
         Scanner reader = new Scanner(System.in);  // Reading from System.in
-        System.out.println("Entrer votre température: ");
+        System.out.println("Bonjour, saisissez une valeur : ");
         float nb1 = reader.nextFloat();
+        System.out.println("saisissez la conversion que vous souhaitez effectuer :");
+        return nb1;
     }
     public float KelvinVersCelcius (float tempKelvin){
         float tempCelcius;
@@ -41,7 +43,12 @@ public class Convertisseur_Monnier_Lemaire {
         return tempFarenheit;
     }
     
-    public double KelvinVersFarenheit(double tempKelvin){
+    /**
+     *
+     * @param tempKelvin
+     * @return
+     */
+    public double KelvinVersFarenheit(float tempKelvin){
         double tempFarenheit;
         tempFarenheit = (tempKelvin*1.8)-459.67;
         return tempFarenheit;
