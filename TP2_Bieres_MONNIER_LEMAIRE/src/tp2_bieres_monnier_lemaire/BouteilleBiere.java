@@ -8,21 +8,19 @@ package tp2_bieres_monnier_lemaire;
  *
  * @author jeanl
  */
+
 public class BouteilleBiere {
     // attributs :
     String nom;
-    Float degreAlcool;
+    float degreAlcool;
     String brasserie;
     boolean ouverte;
     // méthodes :
     public void lireEtiquette(){
         System.out.println("Bouteille de "+nom+" ("+ degreAlcool+" degres)\nBrasserie : "+brasserie);
-     
+    
     }
     
-    BouteilleBiere uneBiere = new BouteilleBiere();
-    
-    uneBiere.nom
     
     
     
