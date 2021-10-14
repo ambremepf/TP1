@@ -15,9 +15,17 @@ public class TP2_Bieres_MONNIER_LEMAIRE {
     public static void main(String[] args) {
         // TODO code application logic 
         
-    BouteilleBiere uneBiere = new BouteilleBiere();
-    uneBiere.nom="Cuvée des trolls";
-    uneBiere.degreAlcool=(float) 7.0; 
+        BouteilleBiere uneBiere = new BouteilleBiere();
+        uneBiere.nom="Cuvée des trolls";
+        uneBiere.degreAlcool=(float) 7.0;
+        uneBiere.brasserie= "Dubuisson";
+        uneBiere.ouverte= false;
+        uneBiere.lireEtiquette();
+        uneBiere.nom="Leffe";
+        uneBiere.degreAlcool=(float) 6.6;
+        uneBiere.brasserie= "Abbaye de Leffe";
+        uneBiere.ouverte= false;
+        uneBiere.lireEtiquette();
     }
     
     

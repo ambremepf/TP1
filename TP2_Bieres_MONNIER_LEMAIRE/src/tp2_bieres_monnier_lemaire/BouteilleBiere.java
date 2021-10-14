@@ -18,8 +18,23 @@ public class BouteilleBiere {
     // méthodes :
     public void lireEtiquette(){
         System.out.println("Bouteille de "+nom+" ("+ degreAlcool+" degres)\nBrasserie : "+brasserie);
-    
+        System.out.println("La bouteille est-elle ouverte? : "+ouverte);
     }
+
+    /**
+     *
+     * @param unNom
+     * @param unDegre
+     * @param uneBrasserie
+     */
+    public BouteilleBiere(String unNom, float unDegre, String 
+    uneBrasserie) { 
+ 
+    nom = unNom; 
+    degreAlcool = unDegre; 
+    brasserie = uneBrasserie; 
+    ouverte = false; 
+}
     
     
     
