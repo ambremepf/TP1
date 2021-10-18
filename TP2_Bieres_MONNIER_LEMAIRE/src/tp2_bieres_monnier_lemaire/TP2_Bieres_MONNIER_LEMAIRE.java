@@ -22,6 +22,10 @@ public class TP2_Bieres_MONNIER_LEMAIRE {
         BouteilleBiere deuxiemeBiere = new BouteilleBiere("8.6",(float) 8.9, "pref dodo");
         
         deuxiemeBiere.lireEtiquette();
+        
+        BouteilleBiere troisiemeBiere = new BouteilleBiere("Chouffe Blanche",(float) 54,"Pour te mettre dans la cuvette des toillette");
+       
+        troisiemeBiere.lireEtiquette();
        
     }
     
