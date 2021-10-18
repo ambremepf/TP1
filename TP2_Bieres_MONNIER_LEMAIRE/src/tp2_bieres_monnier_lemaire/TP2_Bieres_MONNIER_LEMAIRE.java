@@ -30,6 +30,10 @@ public class TP2_Bieres_MONNIER_LEMAIRE {
         troisiemeBiere.decapsuler();
         
         troisiemeBiere.lireEtiquette();
+        
+        troisiemeBiere.toString();
+        
+        System.out.println(troisiemeBiere);
        
     }
     
