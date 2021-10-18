@@ -24,6 +24,9 @@ public class BouteilleBiere {
         if (ouverte==false){
             ouverte = true;
         }
+        else {
+            System.out.println("erreur : la bière est déjà ouverte ");
+        }
                    
         }
     
