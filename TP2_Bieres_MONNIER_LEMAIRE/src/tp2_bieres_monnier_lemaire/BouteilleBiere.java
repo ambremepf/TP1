@@ -26,7 +26,7 @@ public class BouteilleBiere {
         }
                    
         }
-    }
+    
 
     /**
      *
@@ -34,19 +34,12 @@ public class BouteilleBiere {
      * @param unDegre
      * @param uneBrasserie
      */
-    public BouteilleBiere(String unNom, float unDegre, String 
-    uneBrasserie) { 
- 
-    nom = unNom; 
-    degreAlcool = unDegre; 
-    brasserie = uneBrasserie; 
-    ouverte = false; 
+     public BouteilleBiere(String unNom, float unDegre, String uneBrasserie){
+
+        nom = unNom;
+        degreAlcool = unDegre; 
+        brasserie = uneBrasserie; 
+        ouverte = false; 
+    }
 }
-    
-    
-    
-    
-    
-    
-    
-}
+
