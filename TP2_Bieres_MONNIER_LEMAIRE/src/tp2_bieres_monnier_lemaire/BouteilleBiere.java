@@ -20,6 +20,13 @@ public class BouteilleBiere {
         System.out.println("Bouteille de "+nom+" ("+ degreAlcool+" degres)\nBrasserie : "+brasserie);
         System.out.println("La bouteille est-elle ouverte? : "+ouverte);
     }
+    public void decapsuler(){
+        if (ouverte==false){
+            ouverte = true;
+        }
+                   
+        }
+    }
 
     /**
      *
