@@ -18,6 +18,10 @@ public class TP2_Bieres_MONNIER_LEMAIRE {
         BouteilleBiere uneBiere = new BouteilleBiere("cuvée des trolls",(float) 7.0,"Dubuisson");
        
         uneBiere.lireEtiquette();
+        
+        BouteilleBiere deuxiemeBiere = new BouteilleBiere("8.6",(float) 8.9, "pref dodo");
+        
+        deuxiemeBiere.lireEtiquette();
        
     }
     
