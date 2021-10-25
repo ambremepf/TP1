@@ -15,5 +15,13 @@ public class TP2_ConvertisseurObjete_Monnier_Lemaire {
      */
     public static void main(String[] args) {
         // TODO code application logic here  
+    
+      convertisseur monConvertisseur = new convertisseur();
+      int temperature;
+      double temperaturefinal;
+      temperature=2;
+      
+      temperaturefinal=monConvertisseur.CelciusVersFarenheit(temperature);
     }
+    
 }
