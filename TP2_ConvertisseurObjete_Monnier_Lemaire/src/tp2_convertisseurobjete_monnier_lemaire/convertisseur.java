@@ -9,4 +9,22 @@ package tp2_convertisseurobjete_monnier_lemaire;
  * @author jeanl
  */
 
-  
+public class convertisseur{
+
+    public convertisseur() {
+    }
+    
+    /**
+     *
+     * @param args
+     */
+    public static void main (String[] args){
+        
+        convertisseur monConvertisseur = new convertisseur();
+        
+        
+        
+        
+    }
+    
+}  
