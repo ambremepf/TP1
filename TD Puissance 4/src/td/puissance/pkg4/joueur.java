@@ -14,11 +14,20 @@ public class joueur {
     int nombreDesintegrateurs;
     int nombreJetonsRestants;
     Jeton [] ListeJetons;
-    public void joueur(String NomJ1){
-        nom = NomJ1 ; 
+    public void joueur(String j){
+        nom = j ; 
     }
-    public void couleur(String couleurJ1){
-        couleur=couleurJ1;
+    public void couleur(String c){
+        couleur=c;
     }
-    
+    public boolean ajouterJeton(Jeton aj ){
+        ajouterJeton=aj;
+    }
+    public void obtenirDesintegrateur(){
+        
+    }
+    public boolean utiliserDesintegrateur(){
+        
+    }
 }
+a
