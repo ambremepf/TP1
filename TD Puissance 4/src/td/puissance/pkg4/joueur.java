@@ -13,7 +13,7 @@ public class joueur {
     String couleur;
     int nombreDesintegrateurs;
     int nombreJetonsRestants;
-    Jeton ListeJetons;
+    Jeton [] ListeJetons;
     public void joueur(String NomJ1){
         nom = NomJ1 ; 
     }
