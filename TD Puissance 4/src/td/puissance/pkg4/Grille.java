@@ -9,9 +9,5 @@ package td.puissance.pkg4;
  * @author ambre
  */
 public class Grille {
-    Cellule[][]CellulesJeu;
-
-    public Grille() {
-        this.CellulesJeu = new Cellule[6][7];
-    }
+    Cellule[][]CellulesJeu = new Cellule[6][7];
 }
