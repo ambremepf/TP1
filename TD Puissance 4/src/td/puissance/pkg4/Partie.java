@@ -9,8 +9,8 @@ package td.puissance.pkg4;
  * @author ambre
  */
 public class Partie {
-    classjoueur listeJoueur1;
-    classjoueur listeJoueur2;
-    classjoueur joueurCourant;
+    joueur listeJoueur1;
+    joueur listeJoueur2;
+    joueur joueurCourant;
     
 }

@@ -9,5 +9,5 @@ package td.puissance.pkg4;
  * @author ambre
  */
 public class Grille {
-    Grille [6][7]CellulesJeu;
+    Grille [6][7].CellulesJeu;
 }

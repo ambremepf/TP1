@@ -8,11 +8,17 @@ import java.util.Scanner;
  *
  * @author ambre
  */
-public class classjoueur {
+public class joueur {
     String nom;
     String couleur;
     int nombreDesintegrateurs;
     int nombreJetonsRestants;
     Jeton ListeJetons;
+    public void joueur(String NomJ1){
+        nom = NomJ1 ; 
+    }
+    public void couleur(String couleurJ1){
+        couleur=couleurJ1;
+    }
     
 }
