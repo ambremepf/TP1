@@ -19,20 +19,20 @@ public void Cellule(){
     trouNoir = false;
     desintegrateur = false;
 }
-public boolean affecterJeton(Jeton j){
+public boolean affecterJeton(Jeton jetonaffecté){
     
-    if (jetonCourant== null){
-        return true;
-        jetonCourant = j;   
+    if (jetonCourant== jetonaffecté){
+        return false;    
     }
     else {
-        return false;
+        jetonCourant=jetonaffecté;
+        return true;
         
     }
 }
 public String lireCouleurDuJeton(){
     if (jetonCourant != null){
-        return Jeton.couleur;
+        return jetonCourant.couleur;
     }
     else {
         String a;
