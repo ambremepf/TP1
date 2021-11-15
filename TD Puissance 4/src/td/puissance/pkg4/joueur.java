@@ -17,7 +17,12 @@ public class joueur {
     public void joueur(String j){
         nom = j ; 
     }
-    public void couleur(String c){
+
+    /**
+     *
+     * @param c
+     */
+    public void affectercouleur(String c){
         couleur=c;
     }
     public boolean ajouterJeton(Jeton aj ){
