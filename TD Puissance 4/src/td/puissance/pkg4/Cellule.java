@@ -14,11 +14,11 @@ public class Cellule {
     boolean desintegrateur;
 
 
-public boolean affecterJeton(jeton){
+public boolean affecterJeton(Jeton j){
     
-    if (cellule[][]=="null"){
+    if (jetonCourant== null){
         return true;
-        cellule[][] == jeton;   
+        jetonCourant = j;   
     }
     else {
         return false;

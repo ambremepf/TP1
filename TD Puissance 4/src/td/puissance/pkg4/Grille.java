@@ -10,5 +10,4 @@ package td.puissance.pkg4;
  */
 public class Grille {
     Cellule[][]CellulesJeu = new Cellule[6][7];
-    Cellule [][] = "null";
 }
