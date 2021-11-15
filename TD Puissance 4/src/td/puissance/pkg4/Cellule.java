@@ -14,6 +14,11 @@ public class Cellule {
     boolean desintegrateur;
 
 
+public void Cellule(){
+    jetonCourant = null;
+    trouNoir = false;
+    desintegrateur = false;
+}
 public boolean affecterJeton(Jeton j){
     
     if (jetonCourant== null){
@@ -25,5 +30,14 @@ public boolean affecterJeton(Jeton j){
         
     }
 }
-
+public String lireCouleurDuJeton(){
+    if (jetonCourant != null){
+        return Jeton.couleur;
+    }
+    else {
+        String a;
+        a = "vide";
+        return a;
+    }
+}
 }
