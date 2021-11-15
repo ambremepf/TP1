@@ -10,7 +10,7 @@ package td.puissance.pkg4;
  */
 public class Jeton {
     String couleur;
-    public void Jeton(String jet){
+    public Jeton(String jet){
         couleur = jet;
     }
     
