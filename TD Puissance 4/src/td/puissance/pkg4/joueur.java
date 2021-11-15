@@ -13,7 +13,7 @@ public class joueur {
     String couleur;
     int nombreDesintegrateurs;
     int nombreJetonsRestants;
-    Jeton [] ListeJetons;
+    Jeton [] ListeJetons[];
     public void joueur(String j){
         nom = j ; 
     }
@@ -25,13 +25,19 @@ public class joueur {
     public void affectercouleur(String c){
         couleur=c;
     }
-    public boolean ajouterJeton(Jeton aj ){
-        ajouterJeton=aj;
+    public void ajouterJeton(Jeton aj ){
+        nombreJetonsRestants = nombreJetonsRestants + 1;
+        for (int i = 0; i<=20; i++){
+            if(ListeJetons[i] != null){
+                ListeJetons[i]= Jeton.aj;
+                break;
+            }
+        }
     }
     public void obtenirDesintegrateur(){
         
     }
-    public boolean utiliserDesintegrateur(){
+    public void utiliserDesintegrateur(){
         
     }
 }
