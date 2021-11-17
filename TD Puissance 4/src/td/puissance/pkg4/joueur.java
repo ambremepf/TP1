@@ -13,7 +13,7 @@ public class joueur {
     String couleur;
     int nombreDesintegrateurs;
     int nombreJetonsRestants;
-    Jeton [] ListeJetons[];
+    Jeton [] ListeJetons = new Jeton [21];
     public void joueur(String j){
         nom = j ; 
     }
@@ -26,13 +26,10 @@ public class joueur {
         couleur=c;
     }
     public void ajouterJeton(Jeton aj ){
-        nombreJetonsRestants = nombreJetonsRestants + 1;
-        for (int i = 0; i<=20; i++){
-            if(ListeJetons[i] != null){
-                ListeJetons[i]= Jeton aj;
-                break;
-            }
-        }
+       if(nombreJetonsRestants < 21){
+           ListeJetons[nombreJetonsRestants]=aj;
+           nombreJetonsRestants = nombreJetonsRestants + 1;
+       }
     }
     public void obtenirDesintegrateur(){
         
