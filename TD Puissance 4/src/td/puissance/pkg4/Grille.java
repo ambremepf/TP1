@@ -105,7 +105,15 @@ public class Grille {
         }
         return false;
     }
-    
+    public boolean colonneRemplie(int j){
+        
+        for (int i=0;i<=6;i++){
+            if (CellulesJeu[i][j].jetonCourant == null){
+             return false;
+            }
+        }
+        return true;
+    }
         
 }
 
