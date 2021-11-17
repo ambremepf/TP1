@@ -7,15 +7,16 @@ package td.puissance.pkg4;
  *
  * @author ambre
  */
+
+import java.util.Scanner;
 public class Partie {
-    joueur listeJoueur1;
-    joueur listeJoueur2;
+    joueur[] listeJoueur = new joueur [2];
     joueur joueurCourant;
     Grille grilleJeu;
     
 public Partie (joueur premierjoueur, joueur deuxiemejoueur){
-    listeJoueur1 = premierjoueur;
-    listeJoueur2 = deuxiemejoueur;
+   listeJoueur[0] = premierjoueur;
+   listeJoueur[1] = deuxiemejoueur;
     
 }
     
@@ -23,17 +24,42 @@ public Partie (joueur premierjoueur, joueur deuxiemejoueur){
      *
      */
     public void attribuerCouleursAuxJoueurs(){
-        listeJoueur1.couleur= "jaune";
-        listeJoueur2.couleur = "rouge";
+        listeJoueur[0].couleur= "jaune";
+        listeJoueur[1].couleur = "rouge";
 }
     
     public void initialiserPartie (){
-        Grille grilleDeJeu = new Grille();
+        Grille grilleJeu = new Grille();
         
         for (int i=0; i<=21; i++){
             Jeton jetonjoueur1 = new Jeton("jaune");
             Jeton jetonjoueur2 = new Jeton("rouge");
         }
         
+    }
+    public void debuterPartie(){
+        joueurCourant = listeJoueur[0];
+        while (grilleJeu.etreRemplie() == false || grilleJeu.etreGagnantePourJoueur(joueurCourant)!= true){
+             Scanner sc;
+             sc = new Scanner(System.in);
+             int coup;
+             coup = 0;
+             while (coup > 7 || coup<0 || grilleJeu.colonneRemplie(coup)==false) {
+                 System.out.println("quelle colone voulez-vous jouer ?");
+                 coup = sc.nextInt();
+             }
+             
+             Jeton j = joueurCourant.ListeJetons[joueurCourant.nombreJetonsRestants-1];
+             joueurCourant.nombreJetonsRestants--;
+             
+             grilleJeu.ajouterJetonDansColonne(j, coup);
+             
+             if (joueurCourant==listeJoueur[0]){
+                 joueurCourant=listeJoueur[1];
+             }
+             else {
+                 joueurCourant=listeJoueur[0];
+             }
+        }
     }
 }
