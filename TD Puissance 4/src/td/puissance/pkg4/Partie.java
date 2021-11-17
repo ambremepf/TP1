@@ -60,6 +60,9 @@ public Partie (joueur premierjoueur, joueur deuxiemejoueur){
              else {
                  joueurCourant=listeJoueur[0];
              }
+             if (grilleJeu.etreGagnantePourJoueur(joueurCourant)== true){
+                 break;
+             }
         }
     }
 }
