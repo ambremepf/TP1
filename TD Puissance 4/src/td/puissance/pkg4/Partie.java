@@ -29,7 +29,7 @@ public Partie (joueur premierjoueur, joueur deuxiemejoueur){
 }
     
     public void initialiserPartie (){
-        Grille grilleJeu = new Grille();
+        grilleJeu = new Grille();
         
         for (int i=0; i<=21; i++){
             Jeton jetonjoueur1 = new Jeton("jaune");
@@ -40,6 +40,8 @@ public Partie (joueur premierjoueur, joueur deuxiemejoueur){
     public void debuterPartie(){
         joueurCourant = listeJoueur[0];
         while (grilleJeu.etreRemplie() == false || grilleJeu.etreGagnantePourJoueur(joueurCourant)!= true){
+            System.out.println("c'est au tour de " + joueurCourant);
+            grilleJeu.afficherGrilleSurConsole();
              Scanner sc;
              sc = new Scanner(System.in);
              int coup;
