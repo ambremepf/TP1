@@ -13,6 +13,8 @@ public class Jeton {
     public Jeton(String jet){
         couleur = jet;
     }
-    
+    public String lireCouleur(){
+        return couleur;
+    }
     
 }

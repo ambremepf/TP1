@@ -14,30 +14,28 @@ public class Cellule {
     boolean desintegrateur;
 
 
-public void Cellule(){
-    jetonCourant = null;
-    trouNoir = false;
-    desintegrateur = false;
-}
-public boolean affecterJeton(Jeton jetonaffecté){
-    
-    if (jetonCourant== jetonaffecté){
-        return false;    
+    public void Cellule(){
+        jetonCourant = null;
+        trouNoir = false;
+        desintegrateur = false;
     }
-    else {
-        jetonCourant=jetonaffecté;
-        return true;
-        
+    public boolean affecterJeton(Jeton jetonaffecté){
+
+        if (jetonCourant== jetonaffecté){
+            return false;    
+        }
+        else {
+            jetonCourant=jetonaffecté;
+            return true;
+
+        }
     }
-}
-public String lireCouleurDuJeton(){
-    if (jetonCourant != null){
-        return jetonCourant.couleur;
+    public String lireCouleurDuJeton(){
+        if (jetonCourant != null){
+            return jetonCourant.couleur;
+        }
+        else {
+            return ("vide");
+        }
     }
-    else {
-        String a;
-        a = "vide";
-        return a;
-    }
-}
 }
