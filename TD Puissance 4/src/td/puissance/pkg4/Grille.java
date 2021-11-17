@@ -73,6 +73,39 @@ public class Grille {
     public String lireCouleurDuJeton(int i, int j){
         return (CellulesJeu[i][j].lireCouleurDuJeton());    
     }
+    public boolean etreGagnantePourJoueur(joueur J){
+        String Jcouleur=J.couleur;
+        for(int i=0;i<=5;i++){
+            for(int j=0;j<=3;j++){
+                if (CellulesJeu[i][j].lireCouleurDuJeton()==Jcouleur && CellulesJeu[i][j+1].lireCouleurDuJeton()==Jcouleur && CellulesJeu[i][j+2].lireCouleurDuJeton()==Jcouleur && CellulesJeu[i][j+3].lireCouleurDuJeton()==Jcouleur){
+                    return true;
+                }
+            }
+        }
+        for(int i=0;i<=2;i++){
+            for(int j=0;j<=6;j++){
+                if (CellulesJeu[i][j].lireCouleurDuJeton()==Jcouleur && CellulesJeu[i+1][j].lireCouleurDuJeton()==Jcouleur && CellulesJeu[i+2][j].lireCouleurDuJeton()==Jcouleur && CellulesJeu[i+3][j].lireCouleurDuJeton()==Jcouleur){
+                    return true;
+                }
+            }
+        }
+        for(int i=0;i<=2;i++){
+            for(int j=0;j<=3;j++){
+                if (CellulesJeu[i][j].lireCouleurDuJeton()==Jcouleur && CellulesJeu[i+1][j+1].lireCouleurDuJeton()==Jcouleur && CellulesJeu[i+2][j+2].lireCouleurDuJeton()==Jcouleur && CellulesJeu[i+3][j+3].lireCouleurDuJeton()==Jcouleur){
+                    return true;
+                }
+            }
+        }
+        for(int i=5;i>=3;i--){
+            for(int j=0;j<=3;j++){
+                if (CellulesJeu[i][j].lireCouleurDuJeton()==Jcouleur && CellulesJeu[i-1][j+1].lireCouleurDuJeton()==Jcouleur && CellulesJeu[i-2][j+2].lireCouleurDuJeton()==Jcouleur && CellulesJeu[i-3][j+3].lireCouleurDuJeton()==Jcouleur){
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
     
+        
 }
 
