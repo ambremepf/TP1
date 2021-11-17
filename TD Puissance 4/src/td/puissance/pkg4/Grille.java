@@ -11,8 +11,8 @@ import java.util.Scanner;
 public class Grille {
     Cellule[][]CellulesJeu = new Cellule[6][7];
     public void Grille(){
-    for (int i=0;i<=6;i++){
-        for(int j=0;j<=7;j++){
+    for (int i=0;i<=5;i++){
+        for(int j=0;j<=6;j++){
             CellulesJeu[i][j]=new Cellule();
         }
     }
@@ -29,8 +29,8 @@ public class Grille {
          
     }
     public boolean etreRemplie(){
-        for (int i=0;i<=6;i++){
-            for(int j=0;j<=7;j++){
+        for (int i=0;i<=5;i++){
+            for(int j=0;j<=6;j++){
                 if (CellulesJeu[i][j].jetonCourant == null){
                  return false;
                 }
@@ -40,8 +40,8 @@ public class Grille {
         return true;
     }
     public void viderGrille(){
-        for (int i=0;i<=6;i++){
-            for(int j=0;j<=7;j++){
+        for (int i=0;i<=5;i++){
+            for(int j=0;j<=6;j++){
                 CellulesJeu[i][j]= null;
                  
             }
@@ -49,8 +49,8 @@ public class Grille {
         
     }
     public void afficherGrilleSurConsole(){
-        for (int i=0;i<=6;i++){
-            for(int j=0;j<=7;j++){ 
+        for (int i=0;i<=5;i++){
+            for(int j=0;j<=6;j++){ 
                 if (CellulesJeu[i][j].lireCouleurDuJeton() ==null) {
                 System.out.print("-");      
                 } 
@@ -107,7 +107,7 @@ public class Grille {
     }
     public boolean colonneRemplie(int j){
         
-        for (int i=0;i<=6;i++){
+        for (int i=0;i<=5;i++){
             if (CellulesJeu[i][j].jetonCourant == null){
              return false;
             }

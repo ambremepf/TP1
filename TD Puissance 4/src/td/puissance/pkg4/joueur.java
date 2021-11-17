@@ -11,8 +11,8 @@ import java.util.Scanner;
 public class joueur {
     String nom;
     String couleur;
-    int nombreDesintegrateurs;
-    int nombreJetonsRestants;
+    int nombreDesintegrateurs=0;
+    int nombreJetonsRestants=21;
     Jeton [] ListeJetons = new Jeton [21];
     public void joueur(String j){
         nom = j ; 
@@ -32,9 +32,14 @@ public class joueur {
        }
     }
     public void obtenirDesintegrateur(){
+        nombreDesintegrateurs=nombreDesintegrateurs+1;
         
     }
-    public void utiliserDesintegrateur(){
-        
+    public boolean utiliserDesintegrateur(){
+        if (nombreDesintegrateurs==0){
+            return false;
+        }
+        nombreDesintegrateurs=nombreDesintegrateurs-1;    
+        return true;
     }
 }
