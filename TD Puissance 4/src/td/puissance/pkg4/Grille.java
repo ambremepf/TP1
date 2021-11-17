@@ -10,7 +10,7 @@ import java.util.Scanner;
  */
 public class Grille {
     Cellule[][]CellulesJeu = new Cellule[6][7];
-    public void Grille(){
+    public Grille(){
     for (int i=0;i<=5;i++){
         for(int j=0;j<=6;j++){
             CellulesJeu[i][j]=new Cellule();
@@ -31,7 +31,7 @@ public class Grille {
     public boolean etreRemplie(){
         for (int i=0;i<=5;i++){
             for(int j=0;j<=6;j++){
-                if (CellulesJeu[i][j].jetonCourant == null){
+                if (null == CellulesJeu[i][j]){
                  return false;
                 }
         }
@@ -60,9 +60,11 @@ public class Grille {
                 if (CellulesJeu[i][j].lireCouleurDuJeton() =="Jaune") {
                 System.out.print("J");      
                 }
-    
+        
       }  
+      
     }
+    System.out.println(CellulesJeu);
     }
     public boolean celluleOccupee(int i,int j){
        if (CellulesJeu[i][j].jetonCourant != null){
