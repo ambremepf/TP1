@@ -21,11 +21,10 @@ public Partie (joueur premierjoueur, joueur deuxiemejoueur){
     
     /**
      *
-     * @return
      */
-    public String attribuerCouleursAuxJoueurs(){
-        listeJoueur1.affectercouleur = "jaune";
-        listeJoueur2.affectercouleur = "rouge";
+    public void attribuerCouleursAuxJoueurs(){
+        listeJoueur1.couleur= "jaune";
+        listeJoueur2.couleur = "rouge";
 }
     
     public void initialiserPartie (){

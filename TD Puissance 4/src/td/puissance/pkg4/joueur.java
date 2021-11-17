@@ -29,7 +29,7 @@ public class joueur {
         nombreJetonsRestants = nombreJetonsRestants + 1;
         for (int i = 0; i<=20; i++){
             if(ListeJetons[i] != null){
-                ListeJetons[i]= Jeton.aj;
+                ListeJetons[i]= Jeton aj;
                 break;
             }
         }
