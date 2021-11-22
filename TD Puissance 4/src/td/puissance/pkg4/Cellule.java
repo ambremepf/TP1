@@ -73,14 +73,7 @@ public class Cellule {
         }
         return false;
     }
-    public boolean activerTrouNoir(){
-        if (trouNoir==true&& jetonCourant!=null){
-            jetonCourant=null;
-            trouNoir=false;
-            return true;
-        }
-        return false;
-    }
+    
     public String lireCouleurDuJeton(){
         if (jetonCourant != null){
             return jetonCourant.couleur;
@@ -88,5 +81,13 @@ public class Cellule {
         else {
             return ("vide");
         }
+    }
+    public boolean activerTrouNoir(){
+        if (trouNoir==true&& jetonCourant!=null){
+            jetonCourant=null;
+            trouNoir=false;
+            return true;
+        }
+        return false;
     }
 }
