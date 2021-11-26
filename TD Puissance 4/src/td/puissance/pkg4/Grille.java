@@ -54,10 +54,10 @@ public class Grille {
                 if (CellulesJeu[i][j].lireCouleurDuJeton() ==null) {
                 System.out.print("-");      
                 } 
-                if (CellulesJeu[i][j].lireCouleurDuJeton() == "Rouge") {
+                if ("Rouge".equals(CellulesJeu[i][j].lireCouleurDuJeton())) {
                 System.out.print("R");      
                 }
-                if (CellulesJeu[i][j].lireCouleurDuJeton() =="Jaune") {
+                if ("Jaune".equals(CellulesJeu[i][j].lireCouleurDuJeton())) {
                 System.out.print("J");      
                 }
         
