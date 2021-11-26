@@ -51,7 +51,7 @@ public class Grille {
     public void afficherGrilleSurConsole(){
         for (int i=0;i<=5;i++){
             for(int j=0;j<=6;j++){ 
-                if (CellulesJeu[i][j].lireCouleurDuJeton() ==null) {
+                if (CellulesJeu[i][j].lireCouleurDuJeton() =="vide") {
                 System.out.print("-");      
                 } 
                 if ("Rouge".equals(CellulesJeu[i][j].lireCouleurDuJeton())) {
@@ -61,10 +61,10 @@ public class Grille {
                 System.out.print("J");      
                 }
         
-      }  
+      }  System.out.println(CellulesJeu);
       
     }
-    System.out.println(CellulesJeu);
+    
     }
     public boolean celluleOccupee(int i,int j){
        if (CellulesJeu[i][j].jetonCourant != null){
