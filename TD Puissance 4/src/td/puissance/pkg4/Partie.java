@@ -59,15 +59,19 @@ public Partie (joueur premierjoueur, joueur deuxiemejoueur){
              grilleJeu.ajouterJetonDansColonne(jet, coup);
              joueurCourant.nombreJetonsRestants--;
              
+             if (grilleJeu.etreGagnantePourJoueur(joueurCourant)== true){
+                 System.out.println("le gagnant est "+ joueurCourant.nom);
+                 break;
+                         
+             }
+             
              if (joueurCourant==listeJoueur[0]){
                  joueurCourant=listeJoueur[1];
              }
              else {
                  joueurCourant=listeJoueur[0];
              }
-             if (grilleJeu.etreGagnantePourJoueur(joueurCourant)== true){
-                 break;
-             }
+             
         }
     }
 
