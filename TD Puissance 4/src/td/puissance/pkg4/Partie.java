@@ -40,17 +40,20 @@ public Partie (joueur premierjoueur, joueur deuxiemejoueur){
     public void debuterPartie(){
         joueurCourant = listeJoueur[0];
         while (grilleJeu.etreRemplie() == false || grilleJeu.etreGagnantePourJoueur(joueurCourant)!= true){
-            System.out.println("c'est au tour de " + joueurCourant.nom);
-            grilleJeu.afficherGrilleSurConsole();
+             System.out.println("c'est au tour de " + joueurCourant.nom);
+             grilleJeu.afficherGrilleSurConsole();
              Scanner sc;
              sc = new Scanner(System.in);
              int coup;
              coup = 0;
-             while (coup > 7 || coup<0 || grilleJeu.colonneRemplie(coup)==false) {
+             
+             System.out.println("quelle colone voulez-vous jouer ?");
+             coup = sc.nextInt();
+             
+             while (coup>7 || grilleJeu.colonneRemplie(coup)==true ){
                  System.out.println("quelle colone voulez-vous jouer ?");
                  coup = sc.nextInt();
              }
-             
              Jeton j = joueurCourant.ListeJetons[joueurCourant.nombreJetonsRestants-1];
              joueurCourant.nombreJetonsRestants--;
              
