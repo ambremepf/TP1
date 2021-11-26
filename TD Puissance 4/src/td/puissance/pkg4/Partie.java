@@ -9,6 +9,7 @@ package td.puissance.pkg4;
  */
 
 import java.util.Scanner;
+import java.util.Random;
 public class Partie {
     joueur[] listeJoueur = new joueur [2];
     joueur joueurCourant;
@@ -41,6 +42,13 @@ public Partie (joueur premierjoueur, joueur deuxiemejoueur){
     }
     public void debuterPartie(){
         joueurCourant = listeJoueur[0];
+        Random coordonnée1 =new Random();
+        Random coordonnée2 =new Random();
+        for (int place=1;place<=5;place++){
+            int c1 = coordonnée1.nextInt(6);
+            int c2 = coordonnée2.nextInt(7);
+            grilleJeu.CellulesJeu[c1][c2].placerTrouNoir();
+        }
         while (grilleJeu.etreRemplie() == false || grilleJeu.etreGagnantePourJoueur(joueurCourant)!= true){
              System.out.println("c'est au tour de " + joueurCourant.nom);
              grilleJeu.afficherGrilleSurConsole();
