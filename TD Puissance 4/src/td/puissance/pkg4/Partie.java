@@ -24,17 +24,17 @@ public Partie (joueur premierjoueur, joueur deuxiemejoueur){
      *
      */
     public void attribuerCouleursAuxJoueurs(){
-        listeJoueur[0].couleur= "jaune";
-        listeJoueur[1].couleur = "rouge";
+        listeJoueur[0].couleur= "Jaune";
+        listeJoueur[1].couleur = "Rouge";
 }
     
     public void initialiserPartie (){
         grilleJeu = new Grille();
         
         for (int i=0; i<=20; i++){
-            Jeton jetonjoueur1 = new Jeton("jaune");
+            Jeton jetonjoueur1 = new Jeton("Jaune");
             listeJoueur[0].ListeJetons[i] = jetonjoueur1;
-            Jeton jetonjoueur2 = new Jeton("rouge");
+            Jeton jetonjoueur2 = new Jeton("Rouge");
             listeJoueur[1].ListeJetons[i] = jetonjoueur2;
         }
         
@@ -47,7 +47,6 @@ public Partie (joueur premierjoueur, joueur deuxiemejoueur){
              Scanner sc;
              sc = new Scanner(System.in);
              int coup;
-             coup = 0;
              
              System.out.println("quelle colone voulez-vous jouer ?");
              coup = sc.nextInt();

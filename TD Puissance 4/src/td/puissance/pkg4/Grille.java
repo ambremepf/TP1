@@ -11,17 +11,17 @@ import java.util.Scanner;
 public class Grille {
     Cellule[][]CellulesJeu = new Cellule[6][7];
     public Grille(){
-    for (int i=0;i<=5;i++){
+    for (int i=5;i>=0;i--){
         for(int j=0;j<=6;j++){
             CellulesJeu[i][j]=new Cellule();
         }
     }
     }
-    public boolean ajouterJetonDansColonne(Jeton jetG,int j){
+    public boolean ajouterJetonDansColonne(Jeton jetG,int numCol){
          
-         for (int i = 0; i<= 5;i++){
-             if (CellulesJeu[i][j].jetonCourant == null){
-                 CellulesJeu[i][j].jetonCourant =jetG;
+         for (int j = 0; j<= 5;j++){
+             if (CellulesJeu[j][numCol].jetonCourant == null){
+                 CellulesJeu[j][numCol].jetonCourant =jetG;
                  return true;
              }
          }
@@ -49,7 +49,7 @@ public class Grille {
         
     }
     public void afficherGrilleSurConsole(){
-        for (int i=0;i<=5;i++){
+        for (int i=5;i>=0;i--){
             for(int j=0;j<=6;j++){ 
                 if (CellulesJeu[i][j].lireCouleurDuJeton() =="vide") {
                 System.out.print("-");      
