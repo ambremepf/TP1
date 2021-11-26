@@ -27,7 +27,9 @@ public class TDPuissance4 {
         joueur joueurdeux = new joueur();
         joueurdeux.joueur(nomdeux);
         
+        
         Partie part = new Partie (joueurun, joueurdeux);
+        part.attribuerCouleursAuxJoueurs();
         part.initialiserPartie();
         part.debuterPartie();
     }

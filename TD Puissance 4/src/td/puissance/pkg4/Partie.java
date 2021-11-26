@@ -31,9 +31,11 @@ public Partie (joueur premierjoueur, joueur deuxiemejoueur){
     public void initialiserPartie (){
         grilleJeu = new Grille();
         
-        for (int i=0; i<=21; i++){
+        for (int i=0; i<=20; i++){
             Jeton jetonjoueur1 = new Jeton("jaune");
+            listeJoueur[0].ListeJetons[i] = jetonjoueur1;
             Jeton jetonjoueur2 = new Jeton("rouge");
+            listeJoueur[1].ListeJetons[i] = jetonjoueur2;
         }
         
     }
@@ -54,9 +56,9 @@ public Partie (joueur premierjoueur, joueur deuxiemejoueur){
                  System.out.println("quelle colone voulez-vous jouer ?");
                  coup = sc.nextInt();
              }
-             Jeton j = joueurCourant.ListeJetons[joueurCourant.nombreJetonsRestants-1];
-             grilleJeu.ajouterJetonDansColonne(j, coup);
-             
+             Jeton jet = joueurCourant.ListeJetons[joueurCourant.nombreJetonsRestants-1];
+             grilleJeu.ajouterJetonDansColonne(jet, coup);
+             joueurCourant.nombreJetonsRestants--;
              
              if (joueurCourant==listeJoueur[0]){
                  joueurCourant=listeJoueur[1];
