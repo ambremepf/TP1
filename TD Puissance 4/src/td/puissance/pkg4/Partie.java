@@ -40,7 +40,7 @@ public Partie (joueur premierjoueur, joueur deuxiemejoueur){
     public void debuterPartie(){
         joueurCourant = listeJoueur[0];
         while (grilleJeu.etreRemplie() == false || grilleJeu.etreGagnantePourJoueur(joueurCourant)!= true){
-            System.out.println("c'est au tour de " + joueurCourant);
+            System.out.println("c'est au tour de " + joueurCourant.nom);
             grilleJeu.afficherGrilleSurConsole();
              Scanner sc;
              sc = new Scanner(System.in);
@@ -67,4 +67,6 @@ public Partie (joueur premierjoueur, joueur deuxiemejoueur){
              }
         }
     }
+
+   
 }
