@@ -55,9 +55,8 @@ public Partie (joueur premierjoueur, joueur deuxiemejoueur){
                  coup = sc.nextInt();
              }
              Jeton j = joueurCourant.ListeJetons[joueurCourant.nombreJetonsRestants-1];
-             joueurCourant.nombreJetonsRestants--;
-             
              grilleJeu.ajouterJetonDansColonne(j, coup);
+             
              
              if (joueurCourant==listeJoueur[0]){
                  joueurCourant=listeJoueur[1];
