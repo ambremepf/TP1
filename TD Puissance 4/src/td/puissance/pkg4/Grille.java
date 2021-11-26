@@ -52,13 +52,13 @@ public class Grille {
         for (int i=5;i>=0;i--){
             for(int j=0;j<=6;j++){ 
                 if (CellulesJeu[i][j].lireCouleurDuJeton() =="vide") {
-                System.out.print("-");      
+                System.out.print(" - ");      
                 } 
                 if ("Rouge".equals(CellulesJeu[i][j].lireCouleurDuJeton())) {
-                System.out.print("R");      
+                System.out.print(" \033[31m X\033[30m ");      
                 }
                 if ("Jaune".equals(CellulesJeu[i][j].lireCouleurDuJeton())) {
-                System.out.print("J");      
+                System.out.print(" \033[33m X\033[30m ");      
                 }
         
       }  System.out.println(CellulesJeu);
