@@ -48,6 +48,8 @@ public Partie (joueur premierjoueur, joueur deuxiemejoueur){
             int c1 = coordonnée1.nextInt(6);
             int c2 = coordonnée2.nextInt(7);
             grilleJeu.CellulesJeu[c1][c2].placerTrouNoir();
+            
+            
         }
         while (grilleJeu.etreRemplie() == false || grilleJeu.etreGagnantePourJoueur(joueurCourant)!= true){
              System.out.println("c'est au tour de " + joueurCourant.nom);
@@ -64,6 +66,9 @@ public Partie (joueur premierjoueur, joueur deuxiemejoueur){
                  coup = sc.nextInt();
              }
              Jeton jet = joueurCourant.ListeJetons[joueurCourant.nombreJetonsRestants-1];
+             
+                 
+             
              grilleJeu.ajouterJetonDansColonne(jet, coup);
              joueurCourant.nombreJetonsRestants--;
              

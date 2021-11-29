@@ -86,6 +86,8 @@ public class Cellule {
         if (trouNoir==true&& jetonCourant!=null){
             jetonCourant=null;
             trouNoir=false;
+            
+            System.out.print(" \033[34m * \033[30m ");
             return true;
         }
         return false;

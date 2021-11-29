@@ -20,6 +20,13 @@ public class Grille {
     public boolean ajouterJetonDansColonne(Jeton jetG,int numCol){
          
          for (int j = 0; j<= 5;j++){
+             if (CellulesJeu[j][numCol].presenceTrouNoir()==true){
+                 CellulesJeu[j][numCol].activerTrouNoir();
+                 if(CellulesJeu[j][numCol].activerTrouNoir()==true){
+                    System.out.print(" - ");
+                }
+                 
+             }
              if (CellulesJeu[j][numCol].jetonCourant == null){
                  CellulesJeu[j][numCol].jetonCourant =jetG;
                  return true;
@@ -50,16 +57,20 @@ public class Grille {
     }
     public void afficherGrilleSurConsole(){
         for (int i=5;i>=0;i--){
-            for(int j=0;j<=6;j++){ 
-                if (CellulesJeu[i][j].lireCouleurDuJeton() =="vide") {
+            for(int j=0;j<=6;j++){
+                if(CellulesJeu[i][j].trouNoir){
+                    System.out.print(" \033[34m * \033[30m ");
+                } 
+                else if (CellulesJeu[i][j].lireCouleurDuJeton() =="vide") {
                 System.out.print("  -  ");      
                 } 
-                if ("Rouge".equals(CellulesJeu[i][j].lireCouleurDuJeton())) {
+                else if ("Rouge".equals(CellulesJeu[i][j].lireCouleurDuJeton())) {
                 System.out.print(" \033[31m X \033[30m ");      
                 }
-                if ("Jaune".equals(CellulesJeu[i][j].lireCouleurDuJeton())) {
+                else if ("Jaune".equals(CellulesJeu[i][j].lireCouleurDuJeton())) {
                 System.out.print(" \033[33m X \033[30m ");      
                 }
+                
         
       }  System.out.println();
       
