@@ -83,13 +83,14 @@ public class Cellule {
         }
     }
     public boolean activerTrouNoir(){
-        if (trouNoir==true&& jetonCourant!=null){
+        if (trouNoir==true){
             jetonCourant=null;
             trouNoir=false;
             
-            System.out.print(" \033[34m * \033[30m ");
+            
             return true;
-        }
+        }else{
         return false;
+        }
     }
 }
