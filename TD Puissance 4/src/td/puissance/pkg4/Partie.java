@@ -40,6 +40,7 @@ public Partie (joueur premierjoueur, joueur deuxiemejoueur){
         }
         
     }
+    
     public void debuterPartie(){
         joueurCourant = listeJoueur[0];
         Random coordonnée1 =new Random();

@@ -130,6 +130,37 @@ public class Grille {
         }
         return true;
     }
-        
+    public void tasserGrille (int ligne, int j){
+
+     for(int i=0; i<ligne; i++ ){
+
+      CellulesJeu[i+1][j].jetonCourant=CellulesJeu[i][j].jetonCourant;
+
+      CellulesJeu[i][j].jetonCourant = null;
+
+      }
+    }
+    public boolean placerDesintegrateur(int i, int j){
+
+     if (CellulesJeu[i][j].desintegrateur==false){
+        CellulesJeu[i][j].desintegrateur=true;
+        return true;
+     }
+        return false; 
+    }
+    public boolean supprimerJeton(int i, int j){
+
+    if (CellulesJeu[i][j]!=null){
+
+           CellulesJeu[i][j] = null;
+
+           return true;
+
+       }
+
+       else {
+        return false;
+    }
+    }
 }
 
