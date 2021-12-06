@@ -9,5 +9,24 @@ package mastermind_monnier8_lemaire;
  * @author ambre
  */
 public class Joueur {
+    String nom;
     
+    
+    
+    public void joueur(String j){
+        nom = j ; 
+    }
+
+    /**
+     *
+     * @param c
+     */
+    
+    public void ajouterJeton(Jeton aj ){
+       if(nombreJetonsRestants < 21){
+           ListeJetons[nombreJetonsRestants]=aj;
+           nombreJetonsRestants = nombreJetonsRestants + 1;
+       }
+    }
+
 }
