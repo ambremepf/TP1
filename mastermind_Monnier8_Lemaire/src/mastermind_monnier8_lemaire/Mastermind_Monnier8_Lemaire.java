@@ -16,14 +16,6 @@ public class Mastermind_Monnier8_Lemaire {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-    ArrayList<String> Couleur;
-    Couleur = new ArrayList<String>();
-    Couleur.add("vert");
-    Couleur.add("rouge");
-    Couleur.add("noir");
-    Couleur.add("bleu");
-    Couleur.add("jaune");
-    Couleur.add("blanc"); 
     
     
     }

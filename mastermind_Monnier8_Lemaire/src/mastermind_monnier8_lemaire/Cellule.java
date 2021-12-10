@@ -11,3 +11,4 @@ package mastermind_monnier8_lemaire;
 public class Cellule {
     Jeton jetonCourant;
 }
+

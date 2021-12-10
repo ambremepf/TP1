@@ -10,13 +10,25 @@ package mastermind_monnier8_lemaire;
  */
 public class Grille {
     Cellule[][]CellulesJeu = new Cellule[12][4];
+    Cellule[][]Cellulesordi = new Cellule [1][4];
     public Grille(){
     for (int i=11;i>=0;i--){
         for(int j=0;j<=3;j++){
             CellulesJeu[i][j]=new Cellule();
+    
+    
         }
     }
     }
+    
+    public void ConstructeurOrdi(){
+        for (int j=0;j<=3;j++){
+            Cellulesordi[1][j]=new Cellule();
+        }
+        
+    }
+        
+    
     public boolean ajouterJetonDansColonne(Jeton jetG, int lignejeu){
          
          for (int j = 0; j<=3;j++){
