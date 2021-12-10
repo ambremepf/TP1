@@ -25,18 +25,11 @@ public class Jeton {
     
     
 
-    public void listecouleur(){
-        ArrayList<String> Couleur;
-        Couleur = new ArrayList<String>();
-        Couleur.add("vert");
-        Couleur.add("rouge");
-        Couleur.add("noir");
-        Couleur.add("bleu");
-        Couleur.add("jaune");
-        Couleur.add("blanc"); 
+    
+
     
     }
     
-}
+
 
 
