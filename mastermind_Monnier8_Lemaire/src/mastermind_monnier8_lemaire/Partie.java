@@ -55,7 +55,7 @@ public class Partie {
             String choix;
             choix = sc.next();
             
-            while (choix != "jaune" || choix != "rouge" || choix != "noir" || choix != "bleu" || choix != "vert" || choiw !="blance"){
+            while (choix != "jaune" || choix != "rouge" || choix != "noir" || choix != "bleu" || choix != "vert" || choix !="blance"){
                 System.out.println("choisissez la couleur (jaune, rouge, vert, noir, blanc, bleu) pour la "+j+"cases");
                  sc = new Scanner(System.in);
                  choix = sc.next();
