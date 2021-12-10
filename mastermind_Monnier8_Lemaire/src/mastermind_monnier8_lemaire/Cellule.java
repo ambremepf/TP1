@@ -9,5 +9,5 @@ package mastermind_monnier8_lemaire;
  * @author ambre
  */
 public class Cellule {
-    
+    Jeton jetonCourant;
 }

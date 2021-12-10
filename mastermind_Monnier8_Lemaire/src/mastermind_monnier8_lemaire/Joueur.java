@@ -22,11 +22,8 @@ public class Joueur {
      * @param c
      */
     
-    public void ajouterJeton(Jeton aj ){
-       if(nombreJetonsRestants < 21){
-           ListeJetons[nombreJetonsRestants]=aj;
-           nombreJetonsRestants = nombreJetonsRestants + 1;
+    
        }
-    }
+    
 
-}
+

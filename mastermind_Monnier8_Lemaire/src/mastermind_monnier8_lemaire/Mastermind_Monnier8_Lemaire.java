@@ -23,7 +23,9 @@ public class Mastermind_Monnier8_Lemaire {
     Couleur.add("noir");
     Couleur.add("bleu");
     Couleur.add("jaune");
-    Couleur.add("blanc"); // TODO code application logic here
+    Couleur.add("blanc"); 
+    
+    
     }
     
     

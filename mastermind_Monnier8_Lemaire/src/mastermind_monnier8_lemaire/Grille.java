@@ -17,12 +17,12 @@ public class Grille {
         }
     }
     }
-    public boolean ajouterJetonDansColonne(Jeton jetG,int numCol){
+    public boolean ajouterJetonDansColonne(Jeton jetG, int lignejeu){
          
-         for (int j = 0; j<= 5;j++){
+         for (int j = 0; j<=3;j++){
             
-             if (CellulesJeu[j][numCol].jetonCourant == null){
-                 CellulesJeu[j][numCol].jetonCourant =jetG;
+             if (CellulesJeu[lignejeu][j].jetonCourant == null){
+                 CellulesJeu[lignejeu][j].jetonCourant =jetG;
                  return true;
              }
          }
