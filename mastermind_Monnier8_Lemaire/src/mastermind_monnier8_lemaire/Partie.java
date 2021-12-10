@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package mastermind_monnier8_lemaire;
+import java.util.ArrayList;
 import java.util.Random;
 /**
  *
@@ -13,25 +14,35 @@ public class Partie {
     Joueur joueurCourant;
     Grille grilleJeu;
     Grille grilleordi;
-    Jeton Couleur;
-    
+    ArrayList<String> listeCouleurs; 
 
     
     public Partie (Joueur premier1){
         listeJoueur[0] = premier1;
+        
+               
+        listeCouleurs = new ArrayList<String>();
+        listeCouleurs.add("vert");
+        listeCouleurs.add("rouge");
+        listeCouleurs.add("noir");
+        listeCouleurs.add("bleu");
+        listeCouleurs.add("jaune");
+        listeCouleurs.add("blanc"); 
     }
     public void initialiserpartie (){
         grilleJeu = new Grille();
-        grilleordi.co
+        grilleordi.ConstructeurOrdi();
     
 }
     public void debuterpartie(){
         String [] combinaison = new String[4];
         int j = 0;
         Random R = new Random();
-        Couleur.listecouleur();
         for (int i=0; i<=4;i++){
-            i =R.nextInt(Couleur.size());
+            int k = 0;
+            k =R.nextInt();
+            combinaison[i]=listeCouleurs.get(k);
+            
         }
     }
 }
