@@ -57,7 +57,7 @@ public class Partie {
             grilleJeu.ajouterJetonDansColonne(choix);
         }
         
-        nbdepiontbienplacé = grilleJeu.vérificationpion(combinaison);
+        nbdepiontbienplacé = grilleJeu.vérification(combinaison);
         System.out.println("vous avez "+nbdepiontbienplacé+" pions bien placés");
             
         
