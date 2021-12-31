@@ -40,17 +40,37 @@ public class Grille {
                
     }
     int nbdepionbienplacé=0;    
-    public void vérificationpion(String [] grillejeu,String []grilleordi){
+    int nbdepionayantlamemecouleur=0;
+    int tailletableau=4;
+    public int vérification(String []grilleordi){
         for (int j=0;j<=3;j++){
             Grille grilleordiv = null;
             grilleordiv.grille();
-            grilleordiv [] = grilleordi [];
-            if(grilleordiv[j]==grillejeu[j]){
-             nbdepionbienplacé=nbdepionbienplacé+1;
-             for (int a=j;a<=2;a++){
-             grilleordi[a]=grilleordi[a+1];
-             } 
-            }
             
+            if(grilleordi[j]==grilledejeu[j]){
+             nbdepionbienplacé=nbdepionbienplacé+1;
+             for (int a=j;a<=tailletableau-2;a++){
+             grilleordi[a]=grilleordi[a+1];
+             grilledejeu[a]=grilledejeu[a+1];
+             }
+             tailletableau=tailletableau-1;
+            }    
         }
+        for (int j=0;j<tailletableau;j++){
+            for(int a=0;a<tailletableau;a++){
+                if(grilleordi[j]==grilledejeu[a]){
+                    for (int b=a;b<tailletableau-2;b++){
+                    grilledejeu[b]=grilledejeu[b+1];
+                    }
+                    for (int c=j;c<tailletableau-2;c++){
+                    grilledejeu[c]=grilledejeu[c+1];
+                    }
+                }
+                
+                     
+                } 
+            }
+        }
+        
+        
 }
