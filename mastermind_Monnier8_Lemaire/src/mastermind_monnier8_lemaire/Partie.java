@@ -39,7 +39,8 @@ public class Partie {
             combinaison[i]=listeCouleurs.get(k);
         }
         int i =1;
-        while (i!=12){
+        int nbdepiontbienplacé = 0;
+        while (i!=12 || nbdepiontbienplacé == 4){
             for(int j=1;j<=4;j++){
                
             System.out.println("choisissez la couleur (jaune, rouge, vert, noir, blanc, bleu) pour la "+j+" cases");
@@ -55,6 +56,12 @@ public class Partie {
             }
             grilleJeu.ajouterJetonDansColonne(choix);
         }
+        
+        nbdepiontbienplacé = grilleJeu.vérificationpion(combinaison);
+        System.out.println("vous avez "+nbdepiontbienplacé+" pions bien placés");
+            
+        
     }
+      System.out.println("vous avez perdu !");
 }
 }
