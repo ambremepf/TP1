@@ -11,18 +11,12 @@ import java.util.Scanner;
  * @author ambre
  */
 public class Partie {
-    Joueur[] listeJoueur = new Joueur [1];
-    Joueur joueurCourant;
-    Grille grilleJeu;
     Grille grilleordi;
     ArrayList<String> listeCouleurs; 
-    Jeton jetjoueur;
-    
-    public Partie (Joueur premier1){
-        listeJoueur[0] = premier1;
-        
+    Grille grilleJeu;
+    public Partie (){
                
-        listeCouleurs = new ArrayList<String>();
+        listeCouleurs = new ArrayList<>();
         listeCouleurs.add("vert");
         listeCouleurs.add("rouge");
         listeCouleurs.add("noir");
@@ -32,7 +26,7 @@ public class Partie {
     }
     public void initialiserpartie (){
         grilleordi.ConstructeurOrdi();
-        
+        grilleJeu.grille();
         
     
 }
@@ -48,7 +42,7 @@ public class Partie {
         while (i!=12){
             for(int j=1;j<=4;j++){
                
-            System.out.println("choisissez la couleur (jaune, rouge, vert, noir, blanc, bleu) pour la "+j+"cases");
+            System.out.println("choisissez la couleur (jaune, rouge, vert, noir, blanc, bleu) pour la "+j+" cases");
             Scanner sc;
             sc = new Scanner(System.in);
             String choix;
@@ -59,8 +53,7 @@ public class Partie {
                  sc = new Scanner(System.in);
                  choix = sc.next();
             }
-            Jeton jetonjoueur = new Jeton(choix);
-            grilleJeu.ajouterJetonDansColonne(jetjoueur, j-1);
+            grilleJeu.ajouterJetonDansColonne(choix);
         }
     }
 }

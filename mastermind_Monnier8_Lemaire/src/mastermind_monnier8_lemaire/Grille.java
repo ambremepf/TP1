@@ -9,8 +9,11 @@ package mastermind_monnier8_lemaire;
  * @author ambre
  */
 public class Grille {
+    String [] grilledejeu;
+    
+    public void grille(){
     String [] grilledejeu = new String [4];
-   
+    }
     
        
     
@@ -24,11 +27,11 @@ public class Grille {
     
         
     
-    public boolean ajouterJetonDansColonne(String couleur, String [] grillejeu){
+    public boolean ajouterJetonDansColonne(String couleur){
          
          for (int j = 0; j<=3;j++){
-             if (grillejeu[j] == ""){
-                 grillejeu[j] = couleur;
+             if (grilledejeu[j] == " "){
+                 grilledejeu[j] = couleur;
                  return true;
              }
              
