@@ -9,36 +9,31 @@ package mastermind_monnier8_lemaire;
  * @author ambre
  */
 public class Grille {
-    Cellule[][]CellulesJeu = new Cellule[12][4];
-    Cellule[][]Cellulesordi = new Cellule [1][4];
-    public Grille(){
-    for (int i=11;i>=0;i--){
-        for(int j=0;j<=3;j++){
-            CellulesJeu[i][j]=new Cellule();
+    String [] grilledejeu = new String [4];
+   
     
+       
     
-        }
-    }
-    }
     
     public void ConstructeurOrdi(){
-        for (int j=0;j<=3;j++){
-            Cellulesordi[1][j]=new Cellule();
-        }
+        String [] jeuordi = new String [4];
         
-    }
+        }
+    
         
     
-    public boolean ajouterJetonDansColonne(Jeton jetG, int lignejeu){
+        
+    
+    public boolean ajouterJetonDansColonne(String couleur, String [] grillejeu){
          
          for (int j = 0; j<=3;j++){
-            
-             if (CellulesJeu[lignejeu][j].jetonCourant == null){
-                 CellulesJeu[lignejeu][j].jetonCourant =jetG;
+             if (grillejeu[j] == ""){
+                 grillejeu[j] = couleur;
                  return true;
              }
+             
          }
-         return false;
-         
+        return false;
+               
     }
 }

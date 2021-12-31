@@ -31,7 +31,6 @@ public class Partie {
         listeCouleurs.add("blanc"); 
     }
     public void initialiserpartie (){
-        grilleJeu = new Grille();
         grilleordi.ConstructeurOrdi();
         
         
