@@ -39,4 +39,18 @@ public class Grille {
         return false;
                
     }
+    int nbdepionbienplacé=0;    
+    public void vérificationpion(String [] grillejeu,String []grilleordi){
+        for (int j=0;j<=3;j++){
+            Grille grilleordiv = null;
+            grilleordiv.grille();
+            grilleordiv [] = grilleordi [];
+            if(grilleordiv[j]==grillejeu[j]){
+             nbdepionbienplacé=nbdepionbienplacé+1;
+             for (int a=j;a<=2;a++){
+             grilleordi[a]=grilleordi[a+1];
+             } 
+            }
+            
+        }
 }
