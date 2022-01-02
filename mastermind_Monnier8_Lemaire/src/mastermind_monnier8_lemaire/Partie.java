@@ -26,7 +26,7 @@ public class Partie {
     }
     public void initialiserpartie (){
         
-        grilledeJeu.grille();
+        Grille grilledejeu = new Grille();
         
     
 }
