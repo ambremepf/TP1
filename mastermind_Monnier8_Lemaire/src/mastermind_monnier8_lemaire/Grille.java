@@ -39,11 +39,12 @@ public class Grille {
         return false;
                
     }
-    int nbdepionbienplacé=0;    
-    int nbdepionayantlamemecouleur=0;
-    int tailletableau=4;
+    
     public int vérification(String []grilleordi){
-        for (int j=0;j<=3;j++){
+        int nbdepionbienplacé=0;    
+        int nbdepionayantlamemecouleur=0;
+        int tailletableau=4;
+        for (int j=0;j<=tailletableau-1;j++){
             Grille grilleordiv = null;
             grilleordiv.grille();
             
@@ -65,6 +66,8 @@ public class Grille {
                     for (int c=j;c<tailletableau-2;c++){
                     grilledejeu[c]=grilledejeu[c+1];
                     }
+                    nbdepionayantlamemecouleur=nbdepionayantlamemecouleur+1;
+                    tailletableau=tailletableau-1;
                 }
                 
                      
