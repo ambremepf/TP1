@@ -13,18 +13,30 @@ import java.util.Scanner;
 public class Partie {
     
     
-    Grille grilledeJeu;
+    
     public Partie (){
               
         
     }
     public void initialiserpartie (){
         
-        Grille grilledejeu = new Grille();
+        
         
     
 }
+//     Grille grilledeJeu;
+//    public Partie (){
+              
+        
+//    }
+//    public void initialiserpartie (){
+        
+//        Grille grilleDejeu = new Grille();
+        
+    
+//}
     public void debuterpartie(){
+        Grille grilledejeu = new Grille();
         String [] listeCouleurs = new String [6];
         listeCouleurs [0] = "vert";
         listeCouleurs [1] = "rouge";
@@ -50,16 +62,16 @@ public class Partie {
             String choix;
             choix = sc.next();
             
-            while (choix != "jaune" || choix != "rouge" || choix != "noir" || choix != "bleu" || choix != "vert" || choix !="blance"){
-                System.out.println("choisissez la couleur (jaune, rouge, vert, noir, blanc, bleu) pour la "+j+"cases");
-                 sc = new Scanner(System.in);
-                 choix = sc.next();
-            }
-            grilledeJeu.ajouterJetonDansColonne(choix);
-            grilledeJeu.affichergrille();
+            //while (choix != "jaune" || choix != "rouge" || choix != "noir" || choix != "bleu" || choix != "vert" || choix !="blanc"){
+            //    System.out.println("choisissez la couleur (jaune, rouge, vert, noir, blanc, bleu) pour la "+j+"cases");
+             //    sc = new Scanner(System.in);
+             //    choix = sc.next();
+            //}
+            grilledejeu.ajouterJetonDansColonne(choix);
+            grilledejeu.affichergrille();
         }
         
-        nbdepiontbienplacé = grilledeJeu.vérification(combinaison);
+        nbdepiontbienplacé = grilledejeu.vérification(combinaison);
         System.out.println("vous avez "+nbdepiontbienplacé[0]+" pions bien placés et "+nbdepiontbienplacé[1]+" pions de la bonne couleur.");
             
         

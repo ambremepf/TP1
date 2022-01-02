@@ -9,8 +9,8 @@ package mastermind_monnier8_lemaire;
  * @author ambre
  */
 public class Grille {
-    String [] grilledejeu;
-    
+    //String [] grilledejeu;
+    String [] grilledejeu = new String [4];
     public void grille(){
     String [] grilledejeu = new String [4];
     }
