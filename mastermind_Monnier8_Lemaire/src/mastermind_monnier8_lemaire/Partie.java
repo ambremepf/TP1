@@ -12,17 +12,11 @@ import java.util.Scanner;
  */
 public class Partie {
     
-    String []listeCouleurs; 
+    
     Grille grilledeJeu;
     public Partie (){
-               
-        String [] listeCouleurs = new String [6];
-        listeCouleurs [0] = "vert";
-        listeCouleurs [1] = "rouge";
-        listeCouleurs [2] = "noir";
-        listeCouleurs [3] = "bleu";
-        listeCouleurs [4] = "jaune";
-        listeCouleurs [5] = "blanc"; 
+              
+        
     }
     public void initialiserpartie (){
         
@@ -31,11 +25,18 @@ public class Partie {
     
 }
     public void debuterpartie(){
+        String [] listeCouleurs = new String [6];
+        listeCouleurs [0] = "vert";
+        listeCouleurs [1] = "rouge";
+        listeCouleurs [2] = "noir";
+        listeCouleurs [3] = "bleu";
+        listeCouleurs [4] = "jaune";
+        listeCouleurs [5] = "blanc"; 
         String [] combinaison = new String[4];
         Random R = new Random();
-        for (int i=0; i<=4;i++){
+        for (int i=0; i<=3;i++){
             int k = 0;
-            k =R.nextInt();
+            k =R.nextInt(6);
             combinaison[i] = listeCouleurs[k];
         }
         int i =1;
