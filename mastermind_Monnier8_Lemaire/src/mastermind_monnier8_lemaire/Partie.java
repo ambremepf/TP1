@@ -13,7 +13,7 @@ import java.util.Scanner;
 public class Partie {
     
     ArrayList<String> listeCouleurs; 
-    Grille grilleJeu;
+    Grille grilledeJeu;
     public Partie (){
                
         listeCouleurs = new ArrayList<>();
@@ -26,7 +26,7 @@ public class Partie {
     }
     public void initialiserpartie (){
         
-        grilleJeu.grille();
+        grilledeJeu.grille();
         
     
 }
@@ -54,10 +54,10 @@ public class Partie {
                  sc = new Scanner(System.in);
                  choix = sc.next();
             }
-            grilleJeu.ajouterJetonDansColonne(choix);
+            grilledeJeu.ajouterJetonDansColonne(choix);
         }
         
-        nbdepiontbienplacé = grilleJeu.vérification(combinaison);
+        nbdepiontbienplacé = grilledeJeu.vérification(combinaison);
         System.out.println("vous avez "+nbdepiontbienplacé[0]+" pions bien placés et "+nbdepiontbienplacé[1]+" pions de la bonne couleur.");
             
         
