@@ -40,11 +40,11 @@ public class Grille {
                
     }
     
-    public Object[] vérification(String []grilleordi){
+    public int[] vérification(String []grilleordi){
         int nbdepionbienplacé=0;    
         int nbdepionayantlamemecouleur=0;
         int tailletableau=4;
-        Object[] monResultat={nbdepionbienplacé,nbdepionayantlamemecouleur};
+        int[] monResultat={nbdepionbienplacé,nbdepionayantlamemecouleur};
         for (int j=0;j<=tailletableau-1;j++){
             Grille grilleordiv = null;
             grilleordiv.grille();

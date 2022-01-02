@@ -17,6 +17,11 @@ public class Mastermind_Monnier8_Lemaire {
      */
     public static void main(String[] args) {
     
+    Partie partiedejeu = new Partie();
+    partiedejeu.initialiserpartie();
+    partiedejeu.debuterpartie();
+    
+    
     
     }
     
