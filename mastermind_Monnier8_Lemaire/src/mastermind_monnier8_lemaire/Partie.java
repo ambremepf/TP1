@@ -12,17 +12,17 @@ import java.util.Scanner;
  */
 public class Partie {
     
-    ArrayList<String> listeCouleurs; 
+    String []listeCouleurs; 
     Grille grilledeJeu;
     public Partie (){
                
-        listeCouleurs = new ArrayList<>();
-        listeCouleurs.add("vert");
-        listeCouleurs.add("rouge");
-        listeCouleurs.add("noir");
-        listeCouleurs.add("bleu");
-        listeCouleurs.add("jaune");
-        listeCouleurs.add("blanc"); 
+        String [] listeCouleurs = new String [6];
+        listeCouleurs [0] = "vert";
+        listeCouleurs [1] = "rouge";
+        listeCouleurs [2] = "noir";
+        listeCouleurs [3] = "bleu";
+        listeCouleurs [4] = "jaune";
+        listeCouleurs [5] = "blanc"; 
     }
     public void initialiserpartie (){
         
@@ -36,7 +36,7 @@ public class Partie {
         for (int i=0; i<=4;i++){
             int k = 0;
             k =R.nextInt();
-            combinaison[i]=listeCouleurs.get(k);
+            combinaison[i] = listeCouleurs[k];
         }
         int i =1;
         int [] nbdepiontbienplacé = {0,0};
