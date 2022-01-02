@@ -11,7 +11,7 @@ import java.util.Scanner;
  * @author ambre
  */
 public class Partie {
-    Grille grilleordi;
+    
     ArrayList<String> listeCouleurs; 
     Grille grilleJeu;
     public Partie (){
@@ -25,7 +25,7 @@ public class Partie {
         listeCouleurs.add("blanc"); 
     }
     public void initialiserpartie (){
-        grilleordi.ConstructeurOrdi();
+        
         grilleJeu.grille();
         
     

@@ -18,11 +18,6 @@ public class Grille {
        
     
     
-    public void ConstructeurOrdi(){
-        String [] jeuordi = new String [4];
-        
-        }
-    
         
     
         
@@ -30,7 +25,7 @@ public class Grille {
     public boolean ajouterJetonDansColonne(String couleur){
          
          for (int j = 0; j<=3;j++){
-             if (grilledejeu[j] == " "){
+             if (grilledejeu[j] == ""){
                  grilledejeu[j] = couleur;
                  return true;
              }
