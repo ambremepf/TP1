@@ -62,11 +62,11 @@ public class Partie {
             String choix;
             choix = sc.next();
             
-            //while (choix != "jaune" || choix != "rouge" || choix != "noir" || choix != "bleu" || choix != "vert" || choix !="blanc"){
-            //    System.out.println("choisissez la couleur (jaune, rouge, vert, noir, blanc, bleu) pour la "+j+"cases");
-             //    sc = new Scanner(System.in);
-             //    choix = sc.next();
-            //}
+            while (!"jaune".equals(choix) && !"rouge".equals(choix) && !"noir".equals(choix) && !"bleu".equals(choix) && !"vert".equals(choix) && !"blanc".equals(choix)){
+                System.out.println("choisissez la couleur (jaune, rouge, vert, noir, blanc, bleu) pour la "+j+" cases");
+                 sc = new Scanner(System.in);
+                 choix = sc.next();
+            }
             grilledejeu.ajouterJetonDansColonne(choix);
             grilledejeu.affichergrille();
         }

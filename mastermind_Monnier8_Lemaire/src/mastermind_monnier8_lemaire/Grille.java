@@ -46,6 +46,10 @@ public class Grille {
             grilleordicopie[e]=grilleordi[e];
             grilledejeucopie[e]=grilledejeu[e];
         }
+        System.out.println(grilleordicopie);
+        System.out.println(grilledejeucopie);
+        System.out.println(grilleordi);
+        System.out.println(grilledejeu);
         for (int j=0;j<=tailletableau-1;j++){
             if(grilleordicopie[j]==grilledejeucopie[j]){
              nbdepionbienplacé=nbdepionbienplacé+1;
