@@ -55,6 +55,7 @@ public class Partie {
                  choix = sc.next();
             }
             grilledeJeu.ajouterJetonDansColonne(choix);
+            grilledeJeu.affichergrille();
         }
         
         nbdepiontbienplacé = grilledeJeu.vérification(combinaison);

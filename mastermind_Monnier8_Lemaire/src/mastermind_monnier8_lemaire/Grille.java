@@ -75,5 +75,7 @@ public class Grille {
         return monResultat;  
     }
         
-        
+ public void affichergrille(){
+     System.out.println(grilledejeu);
+ }
 }
