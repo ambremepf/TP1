@@ -62,6 +62,11 @@ public class Partie {
             
         
     }
+        
+      if (nbdepiontbienplacé == 4){
+          System.out.println("vous avez gagné !");
+      }else{
       System.out.println("vous avez perdu !");
+}
 }
 }
