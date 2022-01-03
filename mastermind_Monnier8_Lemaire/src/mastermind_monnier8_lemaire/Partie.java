@@ -55,9 +55,9 @@ public class Partie {
             combinaison[i] = listeCouleurs[k];
         }
         int i =1;
-        int [] resultat = {0,0};
-        int nbdepiontbienplacé = (Integer) resultat[0];
-        int bonnecouleur = (Integer) resultat[1];
+        int [] resultat = new int [2];
+        int nbdepiontbienplacé=0;
+        int bonnecouleur;
         while (i!=12 || nbdepiontbienplacé  == 4){
             for(int j=1;j<=4;j++){
                
@@ -72,10 +72,28 @@ public class Partie {
                  sc = new Scanner(System.in);
                  choix = sc.next();
             }
-            
+            int choixint=0;
+            if ("vert".equals(choix)){
+                choixint = 0;
+            }
+            if ("rouge".equals(choix)){
+                choixint =1;
+            }
+            if ("noir".equals(choix)){
+                choixint =2;
+            }
+            if ("bleu".equals(choix)){
+                choixint =3;
+            }
+            if ("jaune".equals(choix)){
+                choixint =4;
+            }
+            if ("blanc".equals(choix)){
+                choixint =5;
+            }
            
              //if (grilledejeu[j] == ""){
-                 grilledejeu[j-1] = choix;
+                 grilledejeu[j-1] = listeCouleurs[choixint];
                  System.out.println(Arrays.toString(grilledejeu));
                  
              //}
@@ -87,8 +105,8 @@ public class Partie {
         
         Grille utilitaire = new Grille();
         resultat = utilitaire.vérification(combinaison, grilledejeu);
-        nbdepiontbienplacé = (Integer) resultat[0];
-        bonnecouleur = (Integer) resultat[1];
+        nbdepiontbienplacé = (int) resultat[0];
+        bonnecouleur = (int) resultat[1];
         System.out.println("vous avez "+nbdepiontbienplacé+" pions bien placés et "+bonnecouleur+" pions de la bonne couleur.");
             
         }
