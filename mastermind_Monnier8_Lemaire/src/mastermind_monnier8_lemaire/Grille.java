@@ -57,29 +57,40 @@ public class Grille {
             if(grilleordicopie[j] == grilledejeucopie[j]){
              nbdepionbienplacé=nbdepionbienplacé+1;
              System.out.println(nbdepionbienplacé);
-             for (int a=j;a<=tailletableau-2;a++){
+             /*for (int a=j;a<=tailletableau-2;a++){
              grilleordicopie[a]=grilleordicopie[a+1];
              grilledejeucopie[a]=grilledejeucopie[a+1];
              }
-             tailletableau=tailletableau-1;
+             tailletableau=tailletableau-1;*/
+             grilleordicopie[j]="verif";
+             grilledejeucopie[j]="verif1";
+             System.out.println(Arrays.toString(grilleordicopie));
+             System.out.println(Arrays.toString(grilledejeucopie));
             }
         
         }
+      
         for (int j=0;j<tailletableau;j++){
             for(int a=0;a<tailletableau;a++){
                 if(grilleordicopie[j]==grilledejeucopie[a]){
-                    for (int b=a;b<tailletableau-2;b++){
+                    /*for (int b=a;b<tailletableau-1;b++){
                     grilledejeucopie[b]=grilledejeucopie[b+1];
                     }
-                    for (int c=j;c<tailletableau-2;c++){
+                    for (int c=j;c<tailletableau-1;c++){
                     grilleordicopie[c]=grilleordicopie[c+1];
-                    }
+                    }*/
+                    grilleordicopie[j]="coulverif";
+                    grilledejeucopie[a]="coulverif1";
                     nbdepionayantlamemecouleur=nbdepionayantlamemecouleur+1;
-                    tailletableau=tailletableau-1;
-                }    
+                    //tailletableau=tailletableau-1;
+                    System.out.println(Arrays.toString(grilleordicopie));
+                    System.out.println(Arrays.toString(grilledejeucopie));
+                }
+                
                 }
             
         }
+        
         int[] monResultat={nbdepionbienplacé,nbdepionayantlamemecouleur};
         System.out.println(Arrays.toString(monResultat));
         return monResultat;
