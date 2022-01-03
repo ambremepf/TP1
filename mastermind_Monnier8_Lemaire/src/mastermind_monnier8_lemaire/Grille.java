@@ -45,16 +45,16 @@ public class Grille {
         System.out.println(Arrays.toString(grilledejeucopie));
         System.out.println(Arrays.toString(grilleordi));
         System.out.println(Arrays.toString(grilledejeu));
-        System.out.println(grilleordicopie[0]);
+        /*System.out.println(grilleordicopie[0]);
         System.out.println(grilledejeucopie[0]);
         System.out.println(grilleordicopie[1]);
         System.out.println(grilledejeucopie[1]);
         System.out.println(grilleordicopie[2]);
         System.out.println(grilledejeucopie[2]);
         System.out.println(grilleordicopie[3]);
-        System.out.println(grilledejeucopie[3]);
+        System.out.println(grilledejeucopie[3]);*/
         for (int j=0;j<=tailletableau-1;j++){
-            if(grilleordicopie[j] == null ? grilledejeucopie[j] == null : grilleordicopie[j].equals(grilledejeucopie[j])){
+            if(grilleordicopie[j] == grilledejeucopie[j]){
              nbdepionbienplacé=nbdepionbienplacé+1;
              System.out.println(nbdepionbienplacé);
              for (int a=j;a<=tailletableau-2;a++){
@@ -67,7 +67,7 @@ public class Grille {
         }
         for (int j=0;j<tailletableau;j++){
             for(int a=0;a<tailletableau;a++){
-                if(grilleordicopie[j] == null ? grilledejeucopie[a] == null : grilleordicopie[j].equals(grilledejeucopie[a])){
+                if(grilleordicopie[j]==grilledejeucopie[a]){
                     for (int b=a;b<tailletableau-2;b++){
                     grilledejeucopie[b]=grilledejeucopie[b+1];
                     }
