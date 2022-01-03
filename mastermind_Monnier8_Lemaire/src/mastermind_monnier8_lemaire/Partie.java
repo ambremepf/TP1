@@ -4,6 +4,7 @@
  */
 package mastermind_monnier8_lemaire;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 /**
@@ -35,8 +36,10 @@ public class Partie {
         
     
 //}
+    
     public void debuterpartie(){
-        Grille grilledejeu = new Grille();
+        //Grille grilledejeu = new Grille();
+        String [] grilledejeu = new String [4];
         String [] listeCouleurs = new String [6];
         listeCouleurs [0] = "vert";
         listeCouleurs [1] = "rouge";
@@ -52,8 +55,10 @@ public class Partie {
             combinaison[i] = listeCouleurs[k];
         }
         int i =1;
-        int [] nbdepiontbienplacé = {0,0};
-        while (i!=12 || nbdepiontbienplacé [0] == 4){
+        int [] resultat = {0,0};
+        int nbdepiontbienplacé = (Integer) resultat[0];
+        int bonnecouleur = (Integer) resultat[1];
+        while (i!=12 || nbdepiontbienplacé  == 4){
             for(int j=1;j<=4;j++){
                
             System.out.println("choisissez la couleur (jaune, rouge, vert, noir, blanc, bleu) pour la "+j+" cases");
@@ -67,17 +72,29 @@ public class Partie {
                  sc = new Scanner(System.in);
                  choix = sc.next();
             }
-            grilledejeu.ajouterJetonDansColonne(choix);
-            grilledejeu.affichergrille();
-        }
-        
-        nbdepiontbienplacé = grilledejeu.vérification(combinaison);
-        System.out.println("vous avez "+nbdepiontbienplacé[0]+" pions bien placés et "+nbdepiontbienplacé[1]+" pions de la bonne couleur.");
+            
+           
+             //if (grilledejeu[j] == ""){
+                 grilledejeu[j-1] = choix;
+                 System.out.println(Arrays.toString(grilledejeu));
+                 
+             //}
+             }
+         
+            
+            //String grillejeu[]=grilledejeu.ajouterJetonDansColonne(choix);
             
         
-    }
+        Grille utilitaire = new Grille();
+        resultat = utilitaire.vérification(combinaison, grilledejeu);
+        nbdepiontbienplacé = (Integer) resultat[0];
+        bonnecouleur = (Integer) resultat[1];
+        System.out.println("vous avez "+nbdepiontbienplacé+" pions bien placés et "+bonnecouleur+" pions de la bonne couleur.");
+            
+        }
+    
         
-      if (nbdepiontbienplacé [0] != 4){
+      if (nbdepiontbienplacé != 4){
           System.out.println("vous avez perdu !");
       }else{
           System.out.println("vous avez gagné !");
