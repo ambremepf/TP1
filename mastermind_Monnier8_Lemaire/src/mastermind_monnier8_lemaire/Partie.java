@@ -58,7 +58,7 @@ public class Partie {
         int [] resultat = new int [2];
         int nbdepiontbienplacé=0;
         int bonnecouleur;
-        while (i!=12 || nbdepiontbienplacé  == 4){
+        while (i!=12 && nbdepiontbienplacé  != 4){
             for(int j=1;j<=4;j++){
                
             System.out.println("choisissez la couleur (jaune, rouge, vert, noir, blanc, bleu) pour la "+j+" cases");
