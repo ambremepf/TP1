@@ -105,7 +105,7 @@ public class Partie {
         
         Grille utilitaire = new Grille(); // on créer cet outil pour pouvoir utiliser la méthode vérification
         resultat = utilitaire.vérification(combinaison, grilledejeu);//on attribut a resultat la valeur retour de la methode vérification dans grille
-        nbdepiontbienplacé = (int) resultat[0];//on recupère les valeurs des deux cases du tableau pour les attribuer au variable
+        nbdepiontbienplacé = (int) resultat[0];//on recupère les valeurs des deux cases du tableau pour les attribuer aux variables
         bonnecouleur = (int) resultat[1];
         System.out.println("vous avez "+nbdepiontbienplacé+" pions bien placés et "+bonnecouleur+" pions de la bonne couleur.");
         for (int aff=5; aff<=8; aff++){ // on met la grille du joueur dans la grille que nous allons afficher
