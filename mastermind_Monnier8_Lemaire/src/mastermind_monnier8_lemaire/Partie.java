@@ -58,14 +58,14 @@ public class Partie {
         int [] resultat = new int [2];
         int nbdepiontbienplacé=0;
         int bonnecouleur;
-        String [][] affichagegrille = new String [10][12];
+        String [][] affichagegrille = new String [14][12];
         for (int y=0; y<=11; y++){
-            affichagegrille[2][y] = "\u001B[30m |";
-            affichagegrille[7][y] = "\u001B[30m |";
-            for (int k=0; k<=1; k++){
+            affichagegrille[4][y] = "\u001B[30m |";
+            affichagegrille[9][y] = "\u001B[30m |";
+            for (int k=0; k<=3; k++){
                 affichagegrille[k][y] = "\u001B[30m *";
             }
-            for (int ze=8; ze<=9; ze++){
+            for (int ze=10; ze<=13; ze++){
                 affichagegrille[ze][y]="\u001B[30m*";
             }
         }
@@ -119,8 +119,8 @@ public class Partie {
         nbdepiontbienplacé = (int) resultat[0];
         bonnecouleur = (int) resultat[1];
         System.out.println("vous avez "+nbdepiontbienplacé+" pions bien placés et "+bonnecouleur+" pions de la bonne couleur.");
-        for (int aff=3; aff<=6; aff++){
-            affichagegrille[aff][i-1] = grilledejeu[aff-3];
+        for (int aff=5; aff<=8; aff++){
+            affichagegrille[aff][i-1] = grilledejeu[aff-5];
         }
         if (nbdepiontbienplacé == 1){
             affichagegrille [0][i-1] = "\u001B[37m 0 ";
@@ -132,61 +132,43 @@ public class Partie {
         if (nbdepiontbienplacé == 3){
             affichagegrille [0][i-1] = "\u001B[37m 0 ";
             affichagegrille [1][i-1] = "\u001B[37m 0 ";
-            affichagegrille [8][i-1] = "\u001B[37m 0 ";
+            affichagegrille [2][i-1] = "\u001B[37m 0 ";
         }
         if (nbdepiontbienplacé == 4){
             affichagegrille [0][i-1] = "\u001B[37m 0 ";
             affichagegrille [1][i-1] = "\u001B[37m 0";
-            affichagegrille [8][i-1] = "\u001B[37m 0 ";
-            affichagegrille [9][i-1] = "\u001B[37m 0";
+            affichagegrille [2][i-1] = "\u001B[37m 0 ";
+            affichagegrille [3][i-1] = "\u001B[37m 0";
         }
         
         
              if(bonnecouleur == 1 ){
-                 for (int ver=0; ver<=9;ver++){
-                 if("\u001B[30m *".equals(affichagegrille [ver][i-1])){
-                    affichagegrille [ver][i-1] = "\u001B[31m 0 ";
-                    break;
-                 }
-                 }
+                affichagegrille [10][i-1] = "\u001B[31m 0 ";
+                
         }
              if(bonnecouleur == 2 ){
-                 for(int rep=0; rep<=2; rep++)
-                 for (int ver=0; ver<=9;ver++){
-                 if("\u001B[30m *".equals(affichagegrille [ver][i-1])){
-                affichagegrille [ver][i-1] = "\u001B[31m 0 ";
-                break;
-                 }
-                 }
+                 affichagegrille [10][i-1] = "\u001B[31m 0 ";
+                 affichagegrille [11][i-1] = "\u001B[31m 0 ";
              }
                  
                  
              if(bonnecouleur == 3 ){
-                 for (int rep=0; rep<=3; rep++){
-                for (int ver=0; ver<=9;ver++){
-                if("\u001B[30m *".equals(affichagegrille [ver][i-1])){
-                 affichagegrille [ver][i-1] = "\u001B[31m 0 ";
-                 break;
-                 }
-                 }
-                 }
+                affichagegrille [10][i-1] = "\u001B[31m 0 ";
+                affichagegrille [11][i-1] = "\u001B[31m 0 ";
+                affichagegrille [12][i-1] = "\u001B[31m 0 ";
                 
         }
              if(bonnecouleur == 4 ){
-                 for (int rep=0; rep<=3; rep++){
-                for (int ver=0; ver<=9;ver++){
-                if("\u001B[30m *".equals(affichagegrille [ver][i-1])){
-                 affichagegrille [ver][i-1] = "\u001B[31m 0 ";
-                 break;
-                 }
-                 }
-                 }
+                 affichagegrille [10][i-1] = "\u001B[31m 0 ";
+                 affichagegrille [11][i-1] = "\u001B[31m 0 ";
+                 affichagegrille [12][i-1] = "\u001B[31m 0 ";
+                 affichagegrille [13][i-1] = "\u001B[31m 0 ";
              }
         
        
         for (int ligne=0; ligne<=11;ligne++){
             System.out.println(" ");
-            for(int affichage=0; affichage<=9; affichage++){
+            for(int affichage=0; affichage<=13; affichage++){
             System.out.print(affichagegrille[affichage][ligne]+" ");
          
         }
