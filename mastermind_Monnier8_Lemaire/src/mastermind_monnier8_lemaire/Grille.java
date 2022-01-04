@@ -113,7 +113,27 @@ public class Grille {
         return monResultat;  
     }*/
         
- public void affichergrille(){
+ /*public void affichergrille(){
      System.out.println(Arrays.toString(grilledejeu));
- }
+ }*/
+
+public void affichergrille(){
+        for (int i=5;i>=0;i--){
+            for(int j=0;j<=6;j++){
+                
+                    if ("rouge".equals(grilledejeu[j])) {
+                    System.out.print(" \033[31m X \033[30m ");      
+                    }
+                    else if ("jaune".equals(grilledejeu[j])) {
+                    System.out.print(" \033[33m X \033[30m ");      
+                    }
+            
+                else  {
+                System.out.print(" ");      
+                } } 
+                
+        
+      }  System.out.println();
+      System.out.println(Arrays.toString(grilledejeu));
+    }
 }
