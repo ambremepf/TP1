@@ -25,18 +25,7 @@ public class Partie {
         
     
 }
-//     Grille grilledeJeu;
-//    public Partie (){
-              
-        
-//    }
-//    public void initialiserpartie (){
-        
-//        Grille grilleDejeu = new Grille();
-        
-    
-//}
-    
+
     public void debuterpartie(){
         //Grille grilledejeu = new Grille();
         String [] grilledejeu = new String [4];
@@ -82,8 +71,8 @@ public class Partie {
                 System.out.println("choisissez la couleur (jaune, rouge, vert, violet, blanc, bleu) pour la "+j+" cases");
                  sc = new Scanner(System.in);
                  choix = sc.next();
-            } // la boucle while permet au joueur de remettre une couleur s'il s'est trompé
-            int choixint=0; // toutes les boucles if permettent d'aller chercher la couleur dans la banque de couleur créer au pré-alabe 
+            } // la boucle while permet au joueur de remettre une couleur s'il s'est trompé dans la saisi
+            int choixint=0; // toutes les conditions if permettent d'aller chercher la couleur dans la banque de couleur créer au pré-alabe 
             if ("vert".equals(choix)){
                 choixint = 0;
             }
@@ -115,14 +104,14 @@ public class Partie {
             
         
         Grille utilitaire = new Grille(); // on créer cet outil pour pouvoir utiliser la méthode vérification
-        resultat = utilitaire.vérification(combinaison, grilledejeu);
-        nbdepiontbienplacé = (int) resultat[0];
+        resultat = utilitaire.vérification(combinaison, grilledejeu);//on attribut a resultat la valeur retour de la methode vérification dans grille
+        nbdepiontbienplacé = (int) resultat[0];//on recupère les valeurs des deux cases du tableau pour les attribuer au variable
         bonnecouleur = (int) resultat[1];
         System.out.println("vous avez "+nbdepiontbienplacé+" pions bien placés et "+bonnecouleur+" pions de la bonne couleur.");
         for (int aff=5; aff<=8; aff++){ // on met la grille du joueur dans la grille que nous allons afficher
             affichagegrille[aff][i-1] = grilledejeu[aff-5];
         }
-        if (nbdepiontbienplacé == 1){ // ces boucles permettent de renvoyer et d'afficher le résultat au joueur
+        if (nbdepiontbienplacé == 1){ // ces conditions permettent de renvoyer et d'afficher le résultat au joueur avec les couleurs correspondantes
             affichagegrille [0][i-1] = "\u001B[37m 0 ";
             }
         if (nbdepiontbienplacé ==2){
@@ -165,8 +154,8 @@ public class Partie {
                  affichagegrille [13][i-1] = "\u001B[31m 0 ";
              }
         
-       
-        for (int ligne=0; ligne<=11;ligne++){ // on affiche la grille au joueur
+       System.out.println("\n bonne place                      bonne couleur");//nom des differentes colonnes de vérification
+        for (int ligne=0; ligne<=11;ligne++){ // boucle qui permet d'afficher la grille au joueur
             System.out.println(" ");
             for(int affichage=0; affichage<=13; affichage++){
             System.out.print(affichagegrille[affichage][ligne]+" ");
@@ -177,10 +166,10 @@ public class Partie {
         i++; // incrémentation (numéro du tour)
         }
         
-      if (nbdepiontbienplacé != 4){ // affichage de l'état de la partie lorsqu'on sort de la boucle while
-          System.out.println("vous avez perdu !");
+      if (nbdepiontbienplacé != 4){ // affichage de l'état de la partie lorsque l'on sort de la boucle while
+          System.out.println("vous avez perdu ! :(");
       }else{
-          System.out.println("vous avez gagné !");
+          System.out.println("vous avez gagné en "+(i-1)+" tours! :)");
       }
 }
 }

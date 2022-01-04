@@ -17,9 +17,9 @@ public class Mastermind_Monnier8_Lemaire {
      */
     public static void main(String[] args) {
     
-    Partie partiedejeu = new Partie();
-    partiedejeu.initialiserpartie();
-    partiedejeu.debuterpartie();
+    Partie partiedejeu = new Partie();// on créer la partie en classe partie pour pouvoir appeler les méthodes de cette classe
+    
+    partiedejeu.debuterpartie(); // on fait débuter la partie
     
     
     
