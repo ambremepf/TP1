@@ -41,16 +41,16 @@ public class Partie {
         //Grille grilledejeu = new Grille();
         String [] grilledejeu = new String [4];
         String [] listeCouleurs = new String [6];
-        listeCouleurs [0] = "vert";
-        listeCouleurs [1] = "rouge";
-        listeCouleurs [2] = "noir";
-        listeCouleurs [3] = "bleu";
-        listeCouleurs [4] = "jaune";
-        listeCouleurs [5] = "blanc"; 
+        listeCouleurs [0] = "\u001B[32m 0 ";
+        listeCouleurs [1] = "\u001B[31m 0 ";
+        listeCouleurs [2] = "0";
+        listeCouleurs [3] = "\u001B[34m 0 ";
+        listeCouleurs [4] = "\u001B[33m 0 ";
+        listeCouleurs [5] = "\u001B[37m 0 "; 
         String [] combinaison = new String[4];
         Random R = new Random();
         for (int i=0; i<=3;i++){
-            int k = 0;
+            int k;
             k =R.nextInt(6);
             combinaison[i] = listeCouleurs[k];
         }
@@ -58,6 +58,17 @@ public class Partie {
         int [] resultat = new int [2];
         int nbdepiontbienplacé=0;
         int bonnecouleur;
+        String [][] affichagegrille = new String [10][12];
+        for (int y=0; y<=11; y++){
+            affichagegrille[2][y] = "|";
+            affichagegrille[7][y] = "|";
+            for (int k=0; k<=1; k++){
+                affichagegrille[k][y] = "*";
+            }
+            for (int ze=8; ze<=9; ze++){
+                affichagegrille[ze][y]="*";
+            }
+        }
         while (i!=12 && nbdepiontbienplacé  != 4){
             for(int j=1;j<=4;j++){
                
@@ -94,7 +105,7 @@ public class Partie {
            
              //if (grilledejeu[j] == ""){
                  grilledejeu[j-1] = listeCouleurs[choixint];
-                 System.out.println(Arrays.toString(grilledejeu));
+                 
                  
              //}
              }
@@ -108,9 +119,57 @@ public class Partie {
         nbdepiontbienplacé = (int) resultat[0];
         bonnecouleur = (int) resultat[1];
         System.out.println("vous avez "+nbdepiontbienplacé+" pions bien placés et "+bonnecouleur+" pions de la bonne couleur.");
-            
+        for (int aff=3; aff<=6; aff++){
+            affichagegrille[aff][i-1] = grilledejeu[aff-3];
         }
-    
+        if (nbdepiontbienplacé == 1){
+            affichagegrille [0][i-1] = "\u001B[37m 0 ";
+            }
+        if (nbdepiontbienplacé ==2){
+            affichagegrille [0][i-1] = "\u001B[37m 0";
+            affichagegrille [1][i-1] = "\u001B[37m 0";
+        }
+        if (nbdepiontbienplacé == 3){
+            affichagegrille [0][i-1] = "\u001B[37m 0 ";
+            affichagegrille [1][i-1] = "\u001B[37m 0 ";
+            affichagegrille [8][i-1] = "\u001B[37m 0 ";
+        }
+        if (nbdepiontbienplacé == 4){
+            affichagegrille [0][i-1] = "\u001B[37m 0 ";
+            affichagegrille [1][i-1] = "\u001B[37m 0";
+            affichagegrille [8][i-1] = "\u001B[37m 0 ";
+            affichagegrille [9][i-1] = "\u001B[37m 0";
+        }
+        
+        
+             if(bonnecouleur == 1 ){
+                 for (int ver=0; ver<=9;ver++){
+                 if("*".equals(affichagegrille [ver][i-1])){
+                    affichagegrille [ver][i-1] = "\u001B[31m 0 ";
+                    break;
+                 }
+                 }
+        }
+             if(bonnecouleur == 2 && "*".equals(affichagegrille [ver][i-1]) ){
+                affichagegrille [ver][i-1] = "\u001B[31m 0 ";
+                affichagegrille [ver+1][i-1] = "\u001B[31m 0 ";
+        }
+             if(bonnecouleur == 2 && "*".equals(affichagegrille [ver][i-1])){
+                affichagegrille [ver][i-1] = "\u001B[31m 0 ";
+                affichagegrille [ver+1][i-1] = "\u001B[31m 0 ";
+        }
+        
+       
+        for (int ligne=0; ligne<=11;ligne++){
+            System.out.println(" ");
+            for(int affichage=0; affichage<=9; affichage++){
+            System.out.print(affichagegrille[affichage][ligne]+" ");
+         
+        }
+        }
+        System.out.println(" ");
+        i++;
+        }
         
       if (nbdepiontbienplacé != 4){
           System.out.println("vous avez perdu !");
