@@ -150,14 +150,38 @@ public class Partie {
                  }
                  }
         }
-             if(bonnecouleur == 2 && "*".equals(affichagegrille [ver][i-1]) ){
+             if(bonnecouleur == 2 ){
+                 for(int rep=0; rep<=1; rep++)
+                 for (int ver=0; ver<=9;ver++){
+                 if("*".equals(affichagegrille [ver][i-1])){
                 affichagegrille [ver][i-1] = "\u001B[31m 0 ";
-                affichagegrille [ver+1][i-1] = "\u001B[31m 0 ";
+                break;
+                 }
+                 }
+             }
+                 
+                 
+             if(bonnecouleur == 3 ){
+                 for (int rep=0; rep<=2; rep++){
+                for (int ver=0; ver<=9;ver++){
+                if("*".equals(affichagegrille [ver][i-1])){
+                 affichagegrille [ver][i-1] = "\u001B[31m 0 ";
+                 break;
+                 }
+                 }
+                 }
+                
         }
-             if(bonnecouleur == 2 && "*".equals(affichagegrille [ver][i-1])){
-                affichagegrille [ver][i-1] = "\u001B[31m 0 ";
-                affichagegrille [ver+1][i-1] = "\u001B[31m 0 ";
-        }
+             if(bonnecouleur == 4 ){
+                 for (int rep=0; rep<=3; rep++){
+                for (int ver=0; ver<=9;ver++){
+                if("*".equals(affichagegrille [ver][i-1])){
+                 affichagegrille [ver][i-1] = "\u001B[31m 0 ";
+                 break;
+                 }
+                 }
+                 }
+             }
         
        
         for (int ligne=0; ligne<=11;ligne++){
