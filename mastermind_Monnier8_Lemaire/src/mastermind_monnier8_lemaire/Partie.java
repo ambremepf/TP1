@@ -43,7 +43,7 @@ public class Partie {
         String [] listeCouleurs = new String [6];
         listeCouleurs [0] = "\u001B[32m 0 ";
         listeCouleurs [1] = "\u001B[31m 0 ";
-        listeCouleurs [2] = "0";
+        listeCouleurs [2] = "\u001B[30m 0 ";
         listeCouleurs [3] = "\u001B[34m 0 ";
         listeCouleurs [4] = "\u001B[33m 0 ";
         listeCouleurs [5] = "\u001B[37m 0 "; 
@@ -60,16 +60,16 @@ public class Partie {
         int bonnecouleur;
         String [][] affichagegrille = new String [10][12];
         for (int y=0; y<=11; y++){
-            affichagegrille[2][y] = "|";
-            affichagegrille[7][y] = "|";
+            affichagegrille[2][y] = "\u001B[30m |";
+            affichagegrille[7][y] = "\u001B[30m |";
             for (int k=0; k<=1; k++){
-                affichagegrille[k][y] = "*";
+                affichagegrille[k][y] = "\u001B[30m *";
             }
             for (int ze=8; ze<=9; ze++){
-                affichagegrille[ze][y]="*";
+                affichagegrille[ze][y]="\u001B[30m*";
             }
         }
-        while (i!=12 && nbdepiontbienplacé  != 4){
+        while (i!=13 && nbdepiontbienplacé  != 4){
             for(int j=1;j<=4;j++){
                
             System.out.println("choisissez la couleur (jaune, rouge, vert, noir, blanc, bleu) pour la "+j+" cases");
@@ -79,7 +79,7 @@ public class Partie {
             choix = sc.next();
             
             while (!"jaune".equals(choix) && !"rouge".equals(choix) && !"noir".equals(choix) && !"bleu".equals(choix) && !"vert".equals(choix) && !"blanc".equals(choix)){
-                System.out.println("choisissez la couleur (jaune, rouge, vert, noir, blanc, bleu) pour la "+j+" cases");
+                System.out.println("choisissez la couleur (jaune, rouge, vert, violet, blanc, bleu) pour la "+j+" cases");
                  sc = new Scanner(System.in);
                  choix = sc.next();
             }
@@ -144,16 +144,16 @@ public class Partie {
         
              if(bonnecouleur == 1 ){
                  for (int ver=0; ver<=9;ver++){
-                 if("*".equals(affichagegrille [ver][i-1])){
+                 if("\u001B[30m *".equals(affichagegrille [ver][i-1])){
                     affichagegrille [ver][i-1] = "\u001B[31m 0 ";
                     break;
                  }
                  }
         }
              if(bonnecouleur == 2 ){
-                 for(int rep=0; rep<=1; rep++)
+                 for(int rep=0; rep<=2; rep++)
                  for (int ver=0; ver<=9;ver++){
-                 if("*".equals(affichagegrille [ver][i-1])){
+                 if("\u001B[30m *".equals(affichagegrille [ver][i-1])){
                 affichagegrille [ver][i-1] = "\u001B[31m 0 ";
                 break;
                  }
@@ -162,9 +162,9 @@ public class Partie {
                  
                  
              if(bonnecouleur == 3 ){
-                 for (int rep=0; rep<=2; rep++){
+                 for (int rep=0; rep<=3; rep++){
                 for (int ver=0; ver<=9;ver++){
-                if("*".equals(affichagegrille [ver][i-1])){
+                if("\u001B[30m *".equals(affichagegrille [ver][i-1])){
                  affichagegrille [ver][i-1] = "\u001B[31m 0 ";
                  break;
                  }
@@ -175,7 +175,7 @@ public class Partie {
              if(bonnecouleur == 4 ){
                  for (int rep=0; rep<=3; rep++){
                 for (int ver=0; ver<=9;ver++){
-                if("*".equals(affichagegrille [ver][i-1])){
+                if("\u001B[30m *".equals(affichagegrille [ver][i-1])){
                  affichagegrille [ver][i-1] = "\u001B[31m 0 ";
                  break;
                  }
